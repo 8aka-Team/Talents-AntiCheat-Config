@@ -15,8 +15,6 @@
 
 #### **“It's not about the money.”**
 
-##### [update-log](https://github.com/CkaDebug/Talents-anticheat-config/blob/main/.github/update-log.md)
-
 ##### MineBBS:[click view](https://www.minebbs.com/resources/talents-anticheat-config.7557/)
 
 ---
@@ -69,7 +67,7 @@ Ultimately, you still need these anti-cheat plugins to use the configuration
 - [TakaAC](https://www.spigotmc.org/resources/taka-anticheat-takaac-cheap-and-reliable-solution.45167/) 
 - [Horizon](https://www.spigotmc.org/resources/horizon-powerful-cheat-detection-in-new-era-1-8-1-12-1-13-1-14.65830/) 
 - [KauriAC](https://www.spigotmc.org/resources/kauri-anticheat-best-in-class-performance-destroy-cheaters-1-7-10-1-18-1.53721/)
-- [Spartan](https://www.spigotmc.org/resources/spartan-advanced-anti-cheat-cheat-detection-hack-blocker-1-7-1-19-2-10-summer-sale.25638) 💀[reveal](https://github.com/CkaDebug/Talents-anticheat-config/blob/main/.github/fucking-spartan.md)💀
+- [Spartan](https://www.spigotmc.org/resources/spartan-advanced-anti-cheat-cheat-detection-hack-blocker-1-7-1-19-2-10-summer-sale.25638)
 - [AntiCheatReloaded](https://www.spigotmc.org/resources/anticheatreloaded.23799/)
 - [Negativityv2](https://www.spigotmc.org/resources/negativity-v2-1-8-to-1-20-bungee-velocity-sponge-fabric-minestom.86874/) Do not use, crash exists!
  

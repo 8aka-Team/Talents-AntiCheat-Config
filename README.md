@@ -58,8 +58,6 @@
 
 #### **“别人在倚老卖老但我在以老带新，只为了给名利场刮点清风。”**
 
-##### [更新日志](https://github.com/TalentsRC/Talents-anticheat-config/blob/main/.github/update-log.md)
-
 ##### MineBBS介绍页:[点击转跳](https://www.minebbs.com/resources/talents-anticheat-config.7557/)
 
 ---
