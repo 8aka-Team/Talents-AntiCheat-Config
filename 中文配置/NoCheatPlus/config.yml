@@ -227,7 +227,7 @@ checks:
     captcha:
       active: "true"
       skip:
-        commands: true
+        commands: false
       characters: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?><
       length: 6
       question: "&c&l(!)&7 请输入验证码 '&6[captcha]&7' 后再继续你的聊天."
@@ -270,7 +270,7 @@ checks:
         log:commands:0:5:cf cancel cmdc:kickcommands vl>20 log:commands:0:5:cf
         cancel cmdc:tempkick1
     text:
-      active: false
+      active: true
       allowvlreset: true
       frequency:
         normal:
@@ -573,8 +573,8 @@ checks:
             ascend:
               speed: 0
             maxheight: 128
-          modifiers: false
-          resetFwOnground: false
+          modifiers: true
+          resetFwOnground: true
           strict: true
       actions:
         cancel log:flyfile:3:5:f vl>100 cancel log:creativefly:8:9:i log:flyfile:0:10:f

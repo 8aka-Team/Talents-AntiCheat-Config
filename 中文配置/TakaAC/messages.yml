@@ -42,12 +42,12 @@ anticheat-report-complete-message: "&6感谢您的举报，很快就会审查."
 #
 #Report staff message
 #placeholders: %player% - reporter, %rep% - reported
-anticheat-report-staff-message: "&cREPORT: &6%player% 举报了 %rep%"
+anticheat-report-staff-message: "&c举报: &6%player% 举报了 %rep%"
 #
 #VL Verbose Message
 #placeholders: %player% - hacker, %hack% - hack, %vl% - violation, %moveCancelViolation% -
 #violation level, at which the player's action is canceled
-anticheat-verbose-message: "&6%player% violated &c&l%hack%&r&6, &bvl=%vl%&6 -> vl > %moveCancelViolation%"
+anticheat-verbose-message: "&6%player% 被标记为 &c&l%hack%&r&6, &bvl=%vl%&6 -> vl > %moveCancelViolation%"
 #
 #VL Reset Message
 anticheat-vl-cleaner-message: "所有违规行为都已重置."

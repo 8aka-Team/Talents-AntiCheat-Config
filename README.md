@@ -27,7 +27,7 @@
 > 
 > ---
 > 
-> 如何联系我？
+> 联系我？
 >
 > QQ: 1787766313
 >
@@ -79,7 +79,7 @@
 
 #### *以为随便调些垃圾就能随便糊弄人*
 
-#### *写不了反作弊只能卖参数赚钱多少有点可悲*
+#### *写不了反作弊只能卖参数赚钱多少有点。。*
 
 ---
  
@@ -101,10 +101,9 @@
 
 - [Matrix](https://matrix.rip) 
 - [NocheatPlus](https://github.com/Updated-NoCheatPlus/NoCheatPlus) 
-- [NocheatPlus-Dreeam](https://github.com/Winds-Studio/NoCheatPlus)(性能优化版本)
 - [GrimAC](https://grim.ac) 
 - [AntiAura](https://www.spigotmc.org/resources/antiaura-%C2%BB-reliable-cheat-detection-%C2%BB-anti-cheat-plugin.1368/update?update=16048) 
-- [Vulcan](https://www.spigotmc.org/resources/vulcan-anti-cheat-advanced-cheat-detection-1-7-1-19.83626/) *不推荐*
+- [Vulcan](https://www.spigotmc.org/resources/vulcan-anti-cheat-advanced-cheat-detection-1-7-1-19.83626/) 
 - [SoaromaSAC](https://www.spigotmc.org/resources/soaromasac-lightweight-cheat-detection-system-for-java-bedrock.87702/)  
 - [Themis](https://www.spigotmc.org/resources/themis-anti-cheat-1-17-1-18-1-19-bedrock-support-paper-compatibility-free-optimized.90766/) 
 - [Hawk](https://github.com/HawkAnticheat/Hawk) 
@@ -115,17 +114,10 @@
 - [TakaAC](https://www.spigotmc.org/resources/taka-anticheat-takaac-cheap-and-reliable-solution.45167/) 
 - [Horizon](https://www.spigotmc.org/resources/horizon-powerful-cheat-detection-in-new-era-1-8-1-12-1-13-1-14.65830/) 
 - [KauriAC](https://www.spigotmc.org/resources/kauri-anticheat-best-in-class-performance-destroy-cheaters-1-7-10-1-18-1.53721/)
-- [Spartan](https://www.spigotmc.org/resources/spartan-advanced-anti-cheat-cheat-detection-hack-blocker-1-7-1-19-2-10-summer-sale.25638) 💀[一些猛料](https://github.com/CkaDebug/Talents-anticheat-config/blob/main/.github/fucking-spartan.md)💀
+- [Spartan](https://www.spigotmc.org/resources/spartan-advanced-anti-cheat-cheat-detection-hack-blocker-1-7-1-19-2-10-summer-sale.25638) 💀[一些猛料](https://github.com/TalentsRC/Talents-anticheat-config/blob/main/.github/fucking-spartan.md)💀
 - [AntiCheatReloaded](https://www.spigotmc.org/resources/anticheatreloaded.23799/)
 - [Negativityv2](https://www.spigotmc.org/resources/negativity-v2-1-8-to-1-20-bungee-velocity-sponge-fabric-minestom.86874/) 不要使用，存在crash！
  
----
-
-### ❓不知道如何选择反作弊❓
-#### 翻阅我制作的[wiki](https://github.com/TalentsDX/Talents-anticheat-config/wiki)
-#### 了解各个反作弊的特点
-#### 以及我对它们的见解
-#### ⚠wiki已死⚠
 ---
 
 ### 🔧如何安装🔧
@@ -179,7 +171,7 @@
 [![Github Actions Build](https://img.shields.io/github/actions/workflow/status/Winds-Studio/Leaf/build-1204.yml?&style=for-the-badge&colorA=19201a&colorB=298046)](https://github.com/Winds-Studio/Leaf/actions)⠀
 [![Discord](https://img.shields.io/discord/1145991395388162119?label=discord&style=for-the-badge&colorA=19201a&colorB=298046)](https://discord.gg/gfgAwdSEuM)
 
-<h5>Leaf是一款来自国人对 <a href="https://github.com/GaleMC/Gale">Gale</a> 进行fork的服务器核心版本，它删除了一些原版的检测并添加了相对不错的优化补丁，可能是目前最有潜力的优化服务器核心</h5>
+<h5>Leaf是一款来自国人Dreeam-qwq对 <a href="https://github.com/GaleMC/Gale">Gale</a> 进行fork的服务器核心版本，它删除了一些原版的检测并添加了可能最好的优化补丁，可能是目前最有潜力的优化服务器核心</h5>
 <h8>Logo图标来自 <a href="https://github.com/envizar">envizar</a></h8>
 </div>
 

@@ -1,4 +1,4 @@
-prefix: "&cVulcan &8»"
+prefix: "&c&lVulcan &8»"
 alerts:
   format: "%prefix% &f%player% &7触发检测 &f%check% %dev%&7(&f标签 %type%&7)%dev% &7[&4%vl%&7/&4%max-vl%&7]"
   hover-message:
