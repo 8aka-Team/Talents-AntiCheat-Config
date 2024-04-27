@@ -3,7 +3,7 @@
 
 [English](https://github.com/CkaDebug/Talents-AntiCheat-Config/blob/main/English-config/en-readme.md)
 
-> 
+
 > ---
 > 
 > 不要对此配置进行**发布**或**出售**并声称是你的**原创**配置
@@ -93,8 +93,8 @@
  
 <div align="left">
  
-### **⭐我正在调试的反作弊配置⭐**
-最终，你仍然需要这些反作弊插件来使用配置
+### **⭐我在调整的反作弊插件列表⭐**
+*包含（过时配置）文件的不会进行任何问题处理，因为反作弊插件早已被作者抛弃*
 
 - [Matrix](https://matrix.rip) 
 - [NocheatPlus](https://github.com/Updated-NoCheatPlus/NoCheatPlus) 
@@ -105,21 +105,19 @@
 - [Themis](https://www.spigotmc.org/resources/themis-anti-cheat-1-17-1-18-1-19-bedrock-support-paper-compatibility-free-optimized.90766/) 
 - [Hawk](https://github.com/HawkAnticheat/Hawk) 
 - [Foxaddition](https://www.spigotmc.org/resources/foxaddition-anti-cheat-1-7-2-1-20-4-geyser-support.111260/) 
- ### 一些我会去配置但是我不保证它稳定性的反作弊配置
- （尽量不要使用被作者抛弃的反作弊，因为它们只能检测远古特征且没有新的维护）
 - [AAC](https://www.spigotmc.org/resources/aac-advanced-anti-cheat-hack-kill-aura-blocker.6442)
 - [TakaAC](https://www.spigotmc.org/resources/taka-anticheat-takaac-cheap-and-reliable-solution.45167/) 
 - [Horizon](https://www.spigotmc.org/resources/horizon-powerful-cheat-detection-in-new-era-1-8-1-12-1-13-1-14.65830/) 
 - [KauriAC](https://www.spigotmc.org/resources/kauri-anticheat-best-in-class-performance-destroy-cheaters-1-7-10-1-18-1.53721/)
 - [Spartan](https://www.spigotmc.org/resources/spartan-advanced-anti-cheat-cheat-detection-hack-blocker-1-7-1-19-2-10-summer-sale.25638) 💀[一些猛料](https://github.com/TalentsRC/Talents-anticheat-config/blob/main/.github/fucking-spartan.md)💀
 - [AntiCheatReloaded](https://www.spigotmc.org/resources/anticheatreloaded.23799/)
-- [Negativityv2](https://www.spigotmc.org/resources/negativity-v2-1-8-to-1-20-bungee-velocity-sponge-fabric-minestom.86874/) 不要使用，存在crash！
+- [Negativityv2](https://www.spigotmc.org/resources/negativity-v2-1-8-to-1-20-bungee-velocity-sponge-fabric-minestom.86874/) 
  
 ---
 
-### 🔧如何安装🔧
+### 🔧如何使用🔧
 
-#### 1.把仓库下载到本地
+#### 1.把配置下载到本地
 
 <img src=".github/assets/1-download.png" align="center" id="header" width="400">
 
