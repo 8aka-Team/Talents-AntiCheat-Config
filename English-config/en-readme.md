@@ -13,8 +13,6 @@
 
 ### From the hands of the malpractice user of 2017-2024
 
-### by-CkaDebug
-
 #### **“It's not about the money.”**
 
 ##### [update-log](https://github.com/CkaDebug/Talents-anticheat-config/blob/main/.github/update-log.md)
@@ -32,12 +30,6 @@
 - Restricted error flag
 - Interesting adjustments
 - full free
-
-#### *Discriminate against all paid anti-cheat config authors*
-
-#### *You think you can fool people with your lousy specs*
-
-#### *You can't write anti-cheating, you can only sell parameters to make money you're kind of pathetic*
 
 ---
  
