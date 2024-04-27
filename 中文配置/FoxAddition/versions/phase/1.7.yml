@@ -1,0 +1,7 @@
+# This files, save the blocks to be excluded when your version
+# of minecraft is different. This exclude blocks for these versions:
+# 1.7. To restore to default value, you need
+# to delete the folder "phase".
+excluded-blocks:
+- TRAP_DOOR
+- BREWING_STAND

@@ -1,0 +1,74 @@
+name: "错误报告"
+description: ' 创建报告以帮助我们改进 '
+title: "[BUG]"
+labels: [bug]
+body:
+- type: textarea
+  id: version
+  attributes:
+    label: "描述错误"
+    description: >-
+      示例: xx配置不工作/有回弹/有严重误判
+    placeholder: '示例: xx配置不工作/有回弹/有严重误判'
+  validations:
+    required: true
+    
+- type: textarea
+  id: logs
+  attributes:
+    label: "日志文件或 图像/视频"
+    description: >-
+      上传带有反作弊误判/回弹的消息提示的日志文件/图像/视频
+    placeholder: '注意：你可以在日志文件里删除一些没必要的信息后上传'
+  validations:
+    required: true
+    
+- type: textarea
+  id: fxbz
+  attributes:
+    label: "复现行动"
+    description: >-
+      重现错误（误判/回弹）的步骤
+    placeholder: |
+      1. 启动服务器和反作弊
+      ... *(您重现错误的一组操作)*
+  validations:
+    required: true
+    
+- type: textarea
+  id: yqxw
+  attributes:
+    label: "预期行为"
+    description: >-
+      对您期望发生的事情进行简单描述
+    placeholder: '示例: 我希望该配置解决误判/回弹/绕过问题'
+  validations:
+    required: true
+
+- type: textarea
+  id: cpu
+  attributes:
+    label: "平台"
+    description: >-
+      例子:
+        - **服务器核心**: spigot/purpur/paper
+        - **服务器类型**: 生存/小游戏/角色扮演（RPG）
+        - **服务器版本**: 1.8.8/1.12.2/1.17/1.19
+        - **反作弊配置版本**: [NoCheatPlus || 20230320 ]
+    value: |
+        - 服务器核心: 
+        - 服务器类型: 
+        - 服务器版本: 
+        - 反作弊配置版本: 
+  validations:
+    required: true
+
+
+- type: textarea
+  id: gdxx
+  attributes:
+    label: "其他补充?"
+    description: >-
+      在此处填写该问题的任何上下文，可以是更详细的描述.
+  validations:
+    required: true

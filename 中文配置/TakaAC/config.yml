@@ -1,0 +1,611 @@
+###################################
+#Taka Anti-Cheat                  #
+#                                 #
+#Created by dani02                #
+###################################
+#
+#Notes:
+#1. Checks without "cancelMove" are move canceled immediately!
+#2. %m% - mode, %player% = player, %hack% = hack, %vl% = violation.
+#3. TAC supports multi commanding.
+#4. CancelMove VL is different than Threshold's VL, when CancelMove VLs are reached then Threshold's VL will be added.
+#5. Check if your config is written correctly: http://yaml-online-parser.appspot.com/.
+
+#
+#DO NOT CHANGE
+#
+config-version: 1.7
+#
+# If the tps is below the break point, all checks will be disabled
+anticheat-break-point-tps: 12.0
+#
+#VL Cleaner Time
+#Per how much time, the vl cleaner will be called(seconds)
+#Suggested value: 60-120
+anticheat-vl-cleaner-time: 300
+#
+#Ghost Mode
+#If enabled, ghost mode will still catch the hacking activity,
+#but will not block player activity, the hacker will not notice
+#that the AC is running and reporting him for hacking activity.
+#This option is global, meaning it will ghost all checks, if you
+#want to ghost only some checks, you should change the values there.
+#
+anticheat-ghost: false
+#
+#Verbose enabled
+#Will the Verbose mode be enabled by default?
+#
+anticheat-verbose-default: true
+#
+#Verbose mode level
+#If verbose is enabled, which level will be on?
+#Mode 3 -> Shows verbose per some time interval
+#Mode 2 -> Shows verbose iff vl action is triggered  
+#Mode 1 -> Shows all verbose messages
+anticheat-verbose-mode-default: 2#
+#Verbose Mode 3 Time
+#Verbose Mode 3 shows verbose messages by time interval
+#Time is measured in milliseconds
+anticheat-verbose-mode-3-timing: 800
+#
+#Log settings
+#%y% - Year, %m% - Month, %d% - Day, %h% - Hour, %mm% - Minute, %s% - Second
+#
+#WTDT - Write To Disk Time - Per how much minutes, TAC will write to the file.
+#Bigger value will reduce the hard disk usage.
+#Warning - TAC will warn in the file logs if the logs size is larger than the
+#setted value(in gigabytes) - If you want to disable it, just set the value to -1
+#*The time which it will check the size is twice than wtdt
+#
+Log:
+  File:
+    enable: true
+    wtdt: 120
+    message: "[%y%/%m%/%d%: %h%:%mm%:%s%] [TAC]"
+    warning: 3.0
+  MySQL:
+    enable: false
+    host: "localhost"
+    username: "user"
+    password: "1234"
+    table: "hackers"
+  Console:
+    enable: true
+    use-colors: true
+#
+#BanWave settings (Default: Disabled)
+#The time should be typed as minutes
+#IBOL - Instant Ban On Leave - True: Ban if the player leave while is in banwave, False: Don't ban him
+#hacker probability - If a player's hacker probability is larger than the settled one, the player will be added to the banwave, to disable, set the value to over 100 (Default: Disabled)
+#To add/remove player in the banwave use: /taka banwave <add/remove> <name>
+BanWave:
+  enable: false
+  time: 30
+  ibol: true
+  hacker_probability: 101
+  command: "tempban %p% 2mon 你拥有太多异常行为"
+#
+#Checks
+#Movement related
+Fly:
+  InvalidY:
+    enable: true
+    ghosted: false
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  StableY:
+    enable: true
+    ghosted: false
+    cancelMove: 4
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  DoubleJump:
+    Up:
+      enable: true
+      ghosted: false
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+    Down:
+      enable: true
+      ghosted: false
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+  Modulo:
+    enable: true
+    ghosted: false
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  SlowY:
+    Instant:
+      enable: true
+      ghosted: false
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+    NonInstant:
+      enable: true
+      ghosted: false
+      cancelMove: 8
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+#
+Speed:
+  OnGround:
+    Normal:
+      enable: true
+      ghosted: false
+      cancelMove: 35
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+    Slime:
+      enable: true
+      ghosted: false
+      cancelMove: 35
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+    SoulSand:
+      enable: true
+      ghosted: false
+      cancelMove: 35
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+    Ice:
+      enable: true
+      ghosted: false
+      cancelMove: 35
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+  Air:
+    enable: true
+    ghosted: false
+    speed: 13
+    cancelMove: 15
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  CobWeb:
+    enable: true
+    ghosted: false
+    speed: 0.115
+    cancelMove: 20
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  Item:
+    enable: true
+    ghosted: false
+    cancelMove: 14
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  Liquid:
+    Water:
+      enable: true
+      ghosted: false
+      cancelMove: 20
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+    Lava:
+      enable: true
+      ghosted: false
+      cancelMove: 30
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+  SprintHungry:
+    enable: true
+    ghosted: false
+    cancelMove: 30
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  Soulsand:
+    enable: true
+    ghosted: false
+    cancelMove: 35
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  Ice:
+    enable: true
+    ghosted: false
+    cancelMove: 35
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  Slime:
+    enable: true
+    ghosted: false
+    cancelMove: 25
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  Vehicle:
+    enable: true
+    ghosted: false
+    cancelMove: 15
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+#
+InvalidFall:
+  StableDistance:
+    enable: true
+    ghosted: false
+    cancelMove: 1
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  SlowerDistance:
+    enable: true
+    ghosted: false
+    cancelMove: 1
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  FasterDistance:
+    Instant:
+      enable: true
+      ghosted: false
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+    NonInstant:
+      enable: true
+      ghosted: false
+      cancelMove: 7
+      threshold:
+        25: "kick %p% 你拥有了太多的异常行为"
+  FastStartDistance:
+    enable: true
+    ghosted: false
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  SlowY:
+    enable: true
+    ghosted: false
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+#
+FastLadder:
+  Instant:
+    enable: true
+    ghosted: false
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  NonInstant:
+    enable: true
+    ghosted: false
+    cancelMove: 7
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+#
+AntiLevitation:
+  enable: true
+  ghosted: false
+  cancelMove: 7
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+NoFall:
+  enable: true
+  ghosted: false
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+ImpossibleJump:
+  enable: true
+  ghosted: false
+  cancelMove: 1
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+Step:
+  jump-pads:
+    wooden-plate: true
+    stone-plate: true
+    iron-plate: true
+    gold-plate: true
+  enable: true
+  ghosted: true
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+HighJump:
+  enable: true
+  ghosted: false
+  threshold:
+    5:
+      - "taka message %p% is using highjump hacks!"
+      - "taka freeze %p% 5"
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+Sneak:
+  enable: true
+  ghosted: false
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+Jesus:
+  enable: true
+  ghosted: false
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+NoPitch:
+  enable: true
+  ghosted: false
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+GroundElytra:
+  enable: true
+  ghosted: false
+  cancelMove: 7
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+Timer:
+  enable: true
+  ghosted: false
+  cancelMove: 10
+  threshold:
+    150: "kick %p% 你拥有了太多的异常行为"
+#
+LowJump:
+  enable: true
+  ghosted: false
+  cancelMove: 5
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+Blink:
+    enable: true
+    ghosted: false
+    cancelMove: 3
+    threshold:
+      6: "kick %p% 你拥有了太多的异常行为"
+#
+Strafe:
+    enable: true
+    ghosted: false
+    cancelMove: 2
+    threshold:
+      12: "kick %p% 你拥有了太多的异常行为"
+
+#Inventory related
+FastInventory:
+  enable: true
+  ghosted: false
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+InvMove:
+  enable: true
+  ghosted: false
+  cancelMove: 16
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+FastEat:
+  enable: true
+  ghosted: false
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+FastClick:
+  enable: true
+  ghosted: false
+  cancelMove: 2
+  threshold:
+    2: "kick %p% 你拥有了太多的异常行为"
+#
+Throw:
+  enable: true
+  ghosted: false
+  threshold:
+    2: "kick %p% 你拥有了太多的异常行为"
+#Block related
+WrongBlock:
+  Direction:
+    enable: true
+    ghosted: false
+    angle: 40
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+#
+LiquidInteraction:
+  enable: true
+  ghosted: false
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+CreativeDrop:
+  enable: true
+  ghosted: false
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+NoSwing:
+  enable: true
+  ghosted: true
+  cancelMove: 3
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+ScaffoldWalk:
+  Basic:
+    enable: true
+    ghosted: false
+    cancelMove: 3
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  Advanced:
+    enable: true
+    ghosted: false
+    cancelMove: 3
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  Ground:
+    enable: true
+    ghosted: false
+    cancelMove: 3
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  Expand:
+    enable: true
+    ghosted: false
+    cancelMove: 3
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  Timer:
+    enable: true
+    ghosted: false
+    cancelMove: 0
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+#
+FastPlace:
+  enable: true
+  ghosted: false
+  cancelMove: 5
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+Nuker:
+  enable: true
+  ghosted: true
+  cancelMove: 3
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+FastBreak:
+  enable: true
+  ghosted: false
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+NoBreakDelay:
+  enable: true
+  ghosted: false
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+AutoSign:
+  enable: true
+  ghosted: false
+  cancelMove: 1
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+
+#Render related
+HealthTag:
+  enable: false
+  player-only: true
+#
+# If you are annoyed by the random noise in the screen when you are stading still, set better-check to false
+Freecam:
+  enable: false
+  better-check: true
+
+#Combat related
+Criticals:
+  enable: true
+  ghosted: false
+  cancelMove: 5
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+AutoSoup:
+  enable: true
+  ghosted: true
+  threshold:
+    25: "kick %p% 你拥有了太多的异常行为"
+#
+FastBow:
+  enable: true
+  ghosted: false
+  cancelMove: 3
+  threshold:
+    6: "kick %p% 你拥有了太多的异常行为"
+
+#Exploit related
+PluginList:
+  enable: true
+#
+UUIDSpoof:
+  enable: true
+#
+AutoRespawn:
+  enable: true
+#
+WorldDownloader:
+  enable: true
+  cmd: "kick %p% 不要使用WorldDownloader!"
+#
+JigsawServerCrash:
+  enable: true
+  cmd: "kick %p% 不要使用ServerCrash!"
+
+#Misc
+Reach:
+  Combat:
+    enable: true
+    ghosted: false
+    cancelMove: 3
+    threshold:
+      2: "kick %p% 你拥有了太多的异常行为"
+InvalidIteraction:
+  Block:
+    enable: true
+    ghosted: false
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+  Entity:
+    enable: true
+    ghosted: false
+    threshold:
+      25: "kick %p% 你拥有了太多的异常行为"
+
+#Chat related
+
+#Chat Captcha is called when player join the server!
+#
+#Chat/Commands Spam time-variation - how much messages the player can send for how much seconds
+#So 4_3 will be - for 3 seconds, the player can send 4 messages, all other
+#messages for this period(time) will be canceled.
+#
+#Badwords/CAPS
+#Blockwords action can be: hide or cancel
+#you can see the availible wordslist in the badwords folder
+#
+#CAPS action can be: lowCase or cancel
+Chat:
+  Captcha:
+    enable: true
+    attempts: 2
+    allowed-commands:
+      - /register
+      - /login
+  Spam:
+    enable: true
+    message: Please slow down the chat!
+    variation-time: "4_3"
+  BadWords:
+    enable: true
+    action: hide
+    player-message: "&c注意你的语言!"
+    wordslist:
+      - en
+      - en_1
+      - en_2
+  Advertising:
+    action: hide
+    IP:
+      enable: true
+    Website:
+      enable: true
+  CAPS:
+    action: lowCase
+    enable: true
+Commands:
+  Spam:
+    message: "Please slow down the chat"
+    variation-time: "4_3"
+  Blockwords:
+    enable: true
+    oneCharChange: true
+    action: hide
+    words:
+      - /pl
+      - /plugins
+      - "/minecraft:plugins"
+      - /version

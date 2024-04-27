@@ -1,0 +1,460 @@
+########## Horizon Config ##########
+# Welcome to Horizon's configuration file.
+# Before changing anything, please note that all settings has been tested.
+# It is recommended not to change any settings if it is not necessary.
+#
+# Issue-Tracker: https://github.com/CraftG/Horizon/issues
+# Discord: https://discord.gg/s8RyWzJ
+# I hope you have a good time here.
+####################################
+
+settings:
+  # Disable drag down feature?
+  enable_drag_down: true
+  # If drag down feature is disabled, should Horizon use drag back instead?
+  drag_back_instead: true
+
+  bungee:
+    # Do you want to enable bungee mode?
+    enabled: false
+    # IP of BungeeCord
+    host: 127.0.0.1
+    # The same to Horizon config in BungeeCord.
+    port: 8888
+
+badpackets:
+  cancel_vl: 0
+  modules:
+    KeepAliveExploit:
+      # Do you want to enable the KeepAliveExploit check?
+      enabled: true
+      vl_addition: 5
+    Derp:
+      # Do you want to enable the KeepAliveExploit check?
+      enabled: true
+      vl_addition: 6
+    CustomPayloadExploit:
+      # Do you want to enable the CustomPayloadExploit check?
+      enabled: true
+      vl_addition: 5
+
+      check_size: 30000
+    NoRotation:
+      # Do you want to enable the NoRotation check?
+      enabled: true
+
+      # Experiment check. Don't add any vl by default.
+      vl_addition: 0
+  # Action map
+  action:
+    8:
+      - 'horizon notify %player% 可能发送错误数据包&7(BadPackets)#1'
+    14:
+      - 'horizon notify %player% 发送错误的数据包&7(BadPackets)#2'
+    20:
+      - 'horizon notify %player% is 因发送错误的数据包而被踢出'
+      - 'litebans:kick %player% &7Unknown Error！'
+
+fastuse:
+  cancel_vl: 5
+  modules:
+    FastEat:
+      # Do you want to enable the FastEat check?
+      enabled: true
+      vl_addition: 2
+      # What delay should be enforced for eating an item?
+      # Measured in ms
+      min_time: 1300
+    FastBow:
+      # Do you want to enable the FastBow check?
+      enabled: true
+      vl_addition: 2
+    FastToggle:
+      # Do you want to enable the FastToggle check?
+      enabled: true
+      vl_addition: 4
+
+      # How many times should a player be allowed to toggle use-item in a second?
+      max_use_toggles: 40
+  # Action map
+  action:
+    6:
+      - 'horizon notify %player% 疑似执行了快速使用&7(FastUse)#1'
+    9:
+      - 'horizon notify %player% 疑似执行了快速使用&7(FastUse)#2'
+    12:
+      - 'horizon notify %player% 因执行快速使用被踢出'
+      - 'litebans:kick %player% &7Anomalous action delay！'
+
+fly:
+  cancel_vl: 10
+  modules:
+    Ability:
+      # Do you want to enable the Ability check?
+      enabled: true
+      vl_addition: 5
+    Elytra:
+      # Do you want to enable the Elytra check?
+      enabled: true
+      vl_addition: 3
+    Equality:
+      # Do you want to enable the Equality check?
+      enabled: true
+      vl_addition: 3
+    Expect:
+      # Do you want to enable the Expect check?
+      enabled: true
+      vl_addition: 2
+    Step:
+      # Do you want to enable the Step check?
+      enabled: true
+      vl_addition: 3
+  # Action map
+  action:
+    90:
+      - 'horizon notify %player% 可能使用了飞行&7(Fly)#1'
+    120:
+      - 'horizon notify %player% 使用飞行&7(Fly)#2'
+    160:
+      - 'horizon notify %player% 因为飞行而被踢出&7(Fly)'
+      - 'litebans:kick %player% Wrong move '
+
+fastbreak:
+  cancel_vl: 2
+  modules:
+    Limit:
+      # Do you want to enable the Limit check?
+      enabled: true
+      vl_addition: 1
+  # Action map
+  action:
+    12:
+      - 'horizon notify %player% 可能使用了快速破坏&7(FastBreak)#1'
+    15:
+      - 'horizon notify %player% 使用了快速破坏&7(FastBreak)#2'
+    18:
+      - 'horizon notify %player% 使用快速破坏而被踢出&7(FastBreak)'
+      - 'litebans:kick %player% Breaking block too fast'
+
+speed:
+  cancel_vl: 10
+  modules:
+    Expect:
+      # Do you want to enable the Expect check?
+      enabled: true
+      vl_addition: 2
+    FastFall:
+      # Do you want to enable the Expect check?
+      enabled: true
+      vl_addition: 3
+    Limit:
+      # Do you want to enable the Limit check?
+      enabled: true
+      vl_addition: 2
+    Sneak:
+      # Do you want to enable the Limit check?
+      enabled: true
+      vl_addition: 3
+
+      # How many times should a player be allowed to toggle sneak in a second?
+      max_sneak_toggles: 20
+    Sprint:
+      # Do you want to enable the Sprint check?
+      enabled: true
+      vl_addition: 3
+    Strafe:
+      # Do you want to enable the Strafe check?
+      enabled: true
+      vl_addition: 4
+    Ladder:
+      # Do you want to enable the Ladder check?
+      enabled: true
+      vl_addition: 3
+  # Action map
+  action:
+    80:
+      - 'horizon notify %player% 可能使用了加速&7(Speed)#1'
+    120:
+      - 'horizon notify %player% 使用了加速&7(Speed)#2'
+    150:
+      - 'horizon notify %player% 因为使用了加速而被踢出&7(Speed)'
+      - 'litebans:kick %player% Bhop？'
+
+timer:
+  cancel_vl: 8
+  modules:
+    Analysis:
+      # Do you want to enable the Analysis check?
+      enabled: true
+      vl_addition: 1
+
+      # Measured in nanosecond
+      analysis_time: 7000000000
+
+      # Measured in nanosecond
+      min_move_interval: 48500000
+  # Action map
+  action:
+    50:
+      - 'horizon notify %player% 可能正在使用了变速齿轮&7(Timer)#1'
+    60:
+      - 'horizon notify %player% 正在使用变速齿轮&7(Timer)#1'
+    80:
+      - 'horizon notify %player% 因为使用变速齿轮而被踢出&7(Timer)'
+      - 'litebans:kick %player% Out of sync timer'
+
+cheststealer:
+  cancel_vl: 3
+  modules:
+    Limit:
+      # Do you want to enable the Limit check?
+      enabled: true
+      vl_addition: 2
+  # Action map
+  action:
+    12:
+      - 'horizon notify %player% 可能从箱子拿取物品的速度太快了&7(ChestStealer)#1'
+    15:
+      - 'horizon notify %player% 从箱子拿取物品的速度过快&7(ChestStealer)#2'
+    20:
+      - 'horizon notify %player% 因为使用箱子窃取而被踢出&7(ChestStealer)'
+      - 'litebans:kick %player% Chest Action'
+
+velocity:
+  cancel_vl: 1
+  modules:
+    Expect:
+      # Do you want to enable the Expect check?
+      enabled: true
+      vl_addition: 2
+  # Action map
+  action:
+    16:
+      - 'horizon notify %player% 可能避开了击退&7(Velocity)#1'
+    20:
+      - 'horizon notify %player% 避开了击退&7(Velocity)#2'
+    25:
+      - 'horizon notify %player% 使用了反击退而被踢出&7(Velocity)'
+      - 'litebans:kick %player%  AntiKnockBack？'
+
+killaura:
+  cancel_vl: 8
+  modules:
+    Heuristic:
+      # Do you want to enable the Heuristic check?
+      enabled: true
+      vl_addition: 3
+
+      reset_head_pos: true
+    Click:
+      # Do you want to enable the Click check?
+      enabled: true
+      vl_addition: 2
+    KeepSprint:
+      # Do you want to enable the KeepSprint check?
+      enabled: true
+      vl_addition: 2
+    Impossible:
+      # Do you want to enable the Impossible check?
+      enabled: true
+      vl_addition: 4
+    Reach:
+      # Do you want to enable the Reach check?
+      enabled: true
+      vl_addition: 2
+
+      max_reach: 3.25
+      max_reach_creative: 5.0
+    SuperKnockback:
+      # Do you want to enable the SuperKnockback check?
+      enabled: true
+      vl_addition: 6
+  # Action map
+  action:
+    10:
+      - 'horizon notify %player% 可能使用了杀戮光环&7(Killaura)#1'
+    12:
+      - 'horizon notify %player% 使用了杀戮光环&7(Killaura)#2'
+    16:
+      - 'horizon notify %player% 因为使用了杀戮光环被踢'
+      - 'litebans:kick %player% Wrong way to attack '
+
+liquidwalk:
+  cancel_vl: 5
+  modules:
+    Hover:
+      # Do you want to enable the Hover check?
+      enabled: true
+      vl_addition: 3
+    Jump:
+      # Do you want to enable the Jump check?
+      enabled: true
+      vl_addition: 1
+  # Action map
+  action:
+    20:
+      - 'horizon notify %player% 可能使用了水上行走&7(LiquidWalk)#1'
+    28:
+      - 'horizon notify %player% 使用了水上行走&7(LiquidWalk)#2'
+    36:
+      - 'horizon notify %player% 因为使用水上行走而被踢出&7(LiquidWalk)'
+      - 'litebans:kick %player% Jesus？'
+
+nofall:
+  cancel_vl: 1
+  modules:
+    GroundSpoof:
+      # Do you want to enable the GroundSpoof check?
+      enabled: true
+      vl_addition: 1
+  # Action map
+  action:
+    10:
+      - 'horizon notify %player% 可能规避了掉落伤害&7(Nofall)#1'
+    12:
+      - 'horizon notify %player% 规避了掉落伤害&7(Nofall)#2'
+    16:
+      - 'horizon notify %player% 因为使用无跌落伤害而被踢出&7(Nofall)'
+      - 'litebans:kick %player% AntiFallDamage？'
+
+phase:
+  cancel_vl: 1
+  modules:
+    Collision:
+      # Do you want to enable the Collision check?
+      enabled: true
+      vl_addition: 2
+  # Action map
+  action:
+    20:
+      - 'horizon notify %player% 可能使用了穿墙&7(Phase)#1'
+    25:
+      - 'horizon notify %player% 使用了穿墙&7(Phase)#2'
+    30:
+      - 'horizon notify %player% 因为使用穿墙被踢出&7(Phase)'
+      - 'litebans:kick %player% Wrong interaction '
+
+scaffold:
+  cancel_vl: 6
+  modules:
+    Rotation:
+      # Do you want to enable the Rotation check?
+      enabled: true
+      vl_addition: 2
+  # Action map
+  action:
+    10:
+      - 'horizon notify %player% 可能使用了自动搭路&7(Scaffold)#1'
+    12:
+      - 'horizon notify %player% 使用了自动搭路&7(Scaffold)#2'
+    15:
+      - 'horizon notify %player% 因使用自动搭路而被踢出&7(Scaffold)'
+      - 'litebans:kick %player% BlockFly'
+
+freecam:
+  # Unused
+  cancel_vl: 0
+  modules:
+    Packet:
+      # Do you want to enable the Packet check?
+      enabled: false
+      # Unused
+      vl_addition: 0
+  # Unused action map
+  action: {}
+
+esp:
+  # Unused
+  cancel_vl: 0
+  modules:
+    StorageESP:
+      # Do you want to enable the StorageESP check?
+      enabled: false
+      # Unused
+      vl_addition: 0
+      # Check interval
+      # Increasing it can save more performance
+      # Decreasing it can make the check more accurate
+      # Measured in tick
+      check_interval: 3
+
+      # Storages within this distance will be shown.
+      min_distance: 8
+
+      # Storages outside this distance will not be checked.
+      max_distance: 80
+    PlayerESP:
+      # Do you want to enable the PlayerESP check?
+      enabled: true
+      # Unused
+      vl_addition: 0
+      # Check interval
+      # Increasing it can save more performance
+      # Decreasing it can make the check more accurate
+      # Measured in tick
+      check_interval: 3
+
+      # Players within this distance will be shown.
+      min_distance: 8
+
+      # Players outside this distance will not be checked.
+      max_distance: 60
+  # Unused action map
+  action: {}
+
+healthtag:
+  # Unused
+  cancel_vl: 0
+  modules:
+    HealthSpoof:
+      # Do you want to enable the HealthSpoof check?
+      enabled: true
+      # Unused
+      vl_addition: 0
+    ItemSpoof:
+      # Do you want to enable the ItemSpoof check?
+      enabled: true
+      # Unused
+      vl_addition: 0
+      # Should Horizon spoof item amount?
+      spoof_amount: true
+      # Should Horizon spoof item enchantments?
+      spoof_enchantments: true
+      # Should Horizon spoof item durability?
+      # This will also spoof unbreakable flag
+      spoof_durability: true
+  # Unused action map
+  action: {}
+
+bowaimbot:
+  # Unused
+  cancel_vl: 0
+  modules:
+    Velocity:
+      # Do you want to enable the Velocity check?
+      enabled: true
+      # Unused
+      vl_addition: 0
+      # Multiply the velocity of arrows to make hack client failed to expect the arrow's trajectory.
+      # It can be harmful if you set it too high.
+      multiplier: 1.3
+      # The y-axis will be added for arrows.
+      # Your players may complain if you set it too high.
+      y_addition: 0.1
+  # Unused action map
+  action: {}
+
+ghostblock:
+  # Unused
+  cancel_vl: 0
+  modules:
+    Packet:
+      # Do you want to enable the Packet check?
+      # This check will update the blocks around the players who failed movement checks.
+      enabled: true
+
+      # If player still get flagged after updating blocks,
+      # should Horizon not update blocks anymore?
+      strict: true
+  # Unused action map
+  action: {}

@@ -1,0 +1,230 @@
+# ------------------------------------------------------------------------------------------- #
+#              ______                        _      _  _  _    _                              #
+#              |  ____|             /\       | |    | |(_)| |  (_)                            #
+#              | |__  ___ __  __   /  \    __| |  __| | _ | |_  _   ___   _ __                #
+#              |  __|/ _ \\ \/ /  / /\ \  / _` | / _` || || __|| | / _ \ | '_ \               #
+#              | |  | (_) |>  <  / ____ \| (_| || (_| || || |_ | || (_) || | | |              #
+#              |_|   \___//_/\_\/_/    \_\\__,_| \__,_||_| \__||_| \___/ |_| |_|              #
+#                                                                                             #
+#                                       [v1.1.7-V1]                                           #
+#                                                                                             #
+# ------------------------------------------------------------------------------------------- #
+# If you has questions, you can join to the discord server in:
+# https://discord.com/invite/FTtVXfj or you can use the Discussion page in https://www.spigotmc.org/threads/612025/.
+
+# Bedrock Support
+# Enable compatibility with Bedrock players?
+bedrock:
+  # You want try to hook with Floodgate?
+  # Automatically detect and hook to floodgate plugin to enable,
+  # disable and unlock some features to X edition.
+  # (Need to install Floodgate in your server for this)
+  floodgate:
+    # If you modify this value, reload the server or use
+    # plugman to reload the plugin.
+    enable: true
+  # You want determine a bedrock player with prefix?
+  # This detect if this is a bedrock user with the prefix,
+  # for this, you need configure a plugin for make bedrock
+  # players has a prefix on the start of the name.
+  #
+  # Enable this only if you server support bedrock
+  # players.
+  prefix:
+    # Do you want enable the detection with prefix?
+    # If you modify this value, reload the server or use
+    # plugman to reload the plugin.
+    enable: false
+    # Determine here the prefix of bedrock players.
+    # If you modify this value, reload the server or use
+    # plugman to reload the plugin.
+    prefix: '.'
+
+# Brand Checker
+# Toggle the anticheat to detect brand of users when join, this can
+# be used to make a blacklist or whitelist of client's brands.
+brandchecker:
+  # Do you want to enable this feature?
+  # If you modify this value, reload the server or use
+  # plugman to reload the plugin.
+  enable: true
+  # Define the type of usage to this list.
+  # 'whitelist': Allow the access to the server users with X brand.
+  # 'blacklist': Deny the access to all people with X brand.
+  type: whitelist
+  # Define here the list of allowed brands.
+  # If you want to notify all brands but no kicks, you can define
+  # 'list' with 'list: {}' and use in 'commands' a command to notify or
+  # you can use 'foxaddition notify'.
+  # (No case sensitive)
+  list:
+  - vanilla
+  - lunarclient
+  - fabric
+  - geyser # Added in case your server support bedrock players.
+  # Determine commands to execute when a user join with an invalid
+  # brand, you can use '{brand}' like a placeholder.
+  commands:
+    - 'foxaddition notify &e{player}&r joined with brand &b{brand}&r but this is &cnot allowed&r here.'
+
+## Hooks
+# Hook some plugins to this anticheat. This allows our anticheat
+# to synchronize with other compatible plugins and provide a better
+# experience with using some features.
+#
+# If you modify any value to enable hook, you need restart the
+# server or you can reload the plugin with Plugman, this support.
+hooks:
+  # DiscordSRV
+  # Allow the plugin to detect the DiscordSRV plugin and send alerts
+  # to a specified channel on the Discord platform. It is recommended
+  # to enable this when you configure the channel to send alerts. If 
+  # you don't configure the channel, this feature will not work.
+  discordsrv:
+    # Do you want to enable this feature?
+    # If the plugin is detected and this option is enabled,
+    # the anticheat will allow the use of DiscordSRV.
+    enable: false
+    # Specify the channel to send alerts to by using its ID.
+    # Modify this before enabling the DiscordSRV hook.
+    channel: 000000000000000000
+    # Some settings, you can modify what is shown in the alerts.
+    show:
+      # Show UUID of the detected user?
+      uuid: true
+      # Show detailed information of the detection?
+      information: true
+      # Show location of the detected user?
+      location: true
+      # Show FoxAddition title?
+      title: true
+    # Modify the titles of all fields here.
+    messages:
+      author: "Alerts"
+      player: "Player"
+      uuid: "UUID"
+      check: "Check"
+      vls: "VLs"
+      location: "Position"
+      information: "Detailed"
+      # This is not a title, but here you can set a message
+      # to send with the embed in "content". You can use this to
+      # mention a role or add any other message.
+      # (!) This send a message before the embed.
+      #
+      # Disable this only leaving:
+      # content: ""
+      #
+      # You don't know how to mention a role? Check:
+      # https://www.youtube.com/watch?v=2PfA-Y02TlA
+      content: ""
+  # ExecutableItems
+  # Allow the plugin to make a forced support to ExecutableItems.
+  # This detect the items that the player used and stop detecting some
+  # hacks to avoid false flags. This has been tested in the version
+  # 6.23.11.12 of that plugin.
+  executableitems:
+    # Do you want to enable this feature?
+    enable: true
+  # PlaceHolderAPI
+  # Allow the plugin to detect external placeholders,
+  # allowing their usage in the language.yml file. Starting from v1.0.7,
+  # you can use language.yml and config.yml, checks.yml in any
+  # violation threshold.
+  placeholderapi:
+    # Do you want to enable this feature?
+    # If the plugin is detected and this option is enabled,
+    # the anticheat will allow the use of placeholders.
+    enable: true
+  # ProtocolLib
+  # Allow the plugin to use packets for extra checks,
+  # you need to use the version 5.0.0 or newer for use this
+  # feature, if you have ProtocolLib but a old version and
+  # this return error, you can disable the option of "enable".
+  #
+  # Download it in:
+  #
+  # - https://ci.dmulloy2.net/job/ProtocolLib//lastBuild/
+  # - https://www.spigotmc.org/resources/1997/
+  protocollib:
+    # Do you want to enable this feature?
+    # If the plugin is detected and this option is enabled,
+    # the anticheat will allow the use of protocollib for
+    # extra checks.
+    enable: true
+  # VeinMiner
+  # Allow the plugin to make a forced support to this.
+  # This automatically detect when use the feature of this plugin,
+  # and ignore in some checks in the moment.
+  # This only was tested with 2.1.1 version.
+  veinminer:
+    # Do you want to enable this feature?
+    enable: true
+  # WeaponMechanics
+  # This automatically detect when use the feature of this plugin,
+  # and ignore in some checks in the moment.
+  # This only was tested with 3.2.8 version.
+  weaponmechanics:
+    # Do you want to enable this feature?
+    enable: true
+    
+## Logs
+# Create a file in 'FoxAddition/logs/' to store all alerts.
+logs:
+  # Do you want to enable this feature?
+  enable: true
+  # Define your preferred timezone to display in the file.
+  # You can find your timezone from the list of IANA time zones:
+  #
+  # https://www.iana.org/time-zones
+  #
+  # Alternatively, you can use "auto" to automatically detect the
+  # current timezone.
+  timezone: auto
+  # Customize the time format in the file.
+  # Default:
+  #
+  # yyyy-MM-dd HH:mm:ss
+  timeformat: yyyy-MM-dd HH:mm:ss
+  # Cleanup settings for log files.
+  # This only clean when the plugin starts.
+  cleanup:
+    # Enable automatic log cleanup after a specified number of days?
+    enable: true
+    # Specify the number of days to retain log files before cleanup.
+    days: 7
+    
+## Notifications
+# Configure the option of the command /foxaddition notify.
+notifies:
+  # Print to console?
+  # Enable this to send the equal notification to the console when
+  # you use the command '/foxaddition notify', this still send to
+  # players with the permission in 'permission'.
+  console: true
+  # Define the permission.
+  # Set here the permission to see the notification in case this
+  # is used in '/foxaddition notify'. By default, this is one
+  # permission default of the anticheat: 'foxac.notifications'
+  permission: 'foxac.notifications'
+    
+## Updates
+# Toggle check updates to find new updates in your files or update
+# in the plugin.
+updates:
+  # Do you want to enable this feature?
+  # Automatic check new updates in the Spigot page. This only detect
+  # when the server is starting. You need to have connection for check
+  # new updates.
+  update: true
+  # Do you want to enable this feature?
+  # [EXPERIMENTAL]
+  # Automatic check for new changes in your configuration files about
+  # the anticheat. This is recommended when you want to apply changes
+  # and apply the changes in the moment.
+  #
+  # If you modify this value, reload the server or use
+  # plugman to reload the plugin.
+  filewatcher: true
+
+version: 4

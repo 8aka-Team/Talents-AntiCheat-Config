@@ -1,0 +1,14 @@
+# This files, save the blocks to be excluded when your version
+# of minecraft is different. This exclude blocks for these versions:
+# 1.13 and 1.14. To restore to default value, you need
+# to delete the folder "phase".
+excluded-blocks:
+- OAK_TRAPDOOR
+- SPRUCE_TRAPDOOR
+- BIRCH_TRAPDOOR
+- JUNGLE_TRAPDOOR
+- ACACIA_TRAPDOOR
+- DARK_OAK_TRAPDOOR
+- IRON_TRAPDOOR
+- BREWING_STAND
+- CONDUIT

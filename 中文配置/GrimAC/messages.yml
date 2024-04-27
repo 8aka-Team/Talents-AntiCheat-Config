@@ -1,0 +1,48 @@
+# \u00BB is » (double >>), ANSI and UTF-8 interpret this differently... you may even see ? due to this
+prefix: "&bGrimAC &8\u00BB"
+
+alerts-enabled: "%prefix% &f\u8b66\u62a5\u5df2\u5f00\u542f"
+alerts-disabled: "%prefix% &f\u8b66\u62a5\u5df2\u7981\u7528"
+client-brand-format: "%prefix% &f%player%  \u7528 %brand% \u52a0\u5165\u4e86\u6e38\u620f"
+console-specify-target: "%prefix% &c\u60a8\u5fc5\u987b\u6307\u5b9a\u4e00\u4e2a\u76ee\u6807\u4f5c\u4e3a\u63a7\u5236\u53f0!"
+player-not-found: "%prefix% &c\u73a9\u5bb6\u4e0d\u5b58\u5728\u6216\u79bb\u7ebf!"
+player-not-this-server: "%prefix% &c\u73a9\u5bb6\u4e0d\u5728\u6b64\u670d\u52a1\u5668\u4e0a！"
+spectate-return: "\n%prefix% &f\u70b9\u51fb\u8fd9\u91cc\u8fd4\u56de\u4e4b\u524d\u7684\u4f4d\u7f6e\n"
+cannot-spectate-return: "%prefix% &c您\u53ea\u80fd\u5728\u89c2\u770b\u73a9\u5bb6\u540e\u6267\u884c\u6b64\u64cd\u4f5c"
+cannot-run-on-self: "%prefix% &c\u4f60\u4e0d\u80fd\u5bf9\u81ea\u5df1\u4f7f\u7528\u6b64\u547d\u4ee4!"
+upload-log: "%prefix% &f\u5df2\u7ecf\u5c06\u65e5\u5fd7\u6587\u4ef6\u4e0a\u4f20\u81f3: %url%"
+upload-log-start: "%prefix% &f\u4e0a\u4f20\u4e2d...\u8bf7\u7b49\u5f85"
+upload-log-not-found: "%prefix% &c\u627e\u4e0d\u5230\u8be5\u65e5\u5fd7."
+upload-log-upload-failure: "%prefix% &c\u4e0a\u8f7d\u6b64\u65e5\u5fd7\u65f6\u51fa\u9519, \u6709\u5173\u8be6\u7ec6\u4fe1\u606f, \u8bf7\u53c2\u9605\u63a7\u5236\u53f0"
+
+# Valid placeholders:
+# %prefix% - 前缀
+# %player% - 玩家
+# %check_name% - 检查名字
+# %vl% - VL值
+# %verbose% - 检查中的额外信息，例如偏移量，并非所有检查都会添加信息
+alerts-format: "%prefix% &f%player% &b\u89e6\u53d1\u4e86\u6a21\u5757 &f%check_name% &f(x&c%vl%&f) &7%verbose%"
+alerts-format-proxy: "%prefix% &f[&cproxy&f] &f%player% &b\u89e6\u53d1\u4e86\u6a21\u5757 &f%check_name% &f(x&c%vl%&f) &7%verbose%"
+
+profile:
+  - "&7======================"
+  - "%prefix% \u73a9\u5bb6 &f%player% &b \u5ba2\u6237\u7aef\u4fe1\u606f"
+  - "&b\u5ef6\u8fdf: &f%ping%"
+  - "&b\u7248\u672c: &f%version%"
+  - "&b\u5ba2\u6237\u7aef\u54c1\u724c: &f%brand%"
+  - "&b\u6c34\u5e73\u7075\u654f\u5ea6: &f%h_sensitivity%%"
+  - "&b\u5782\u76f4\u7075\u654f\u5ea6: &f%v_sensitivity%%"
+  - "&bFastMast: &f%fast_math%"
+  - "&7======================"
+help:
+  - "&7======================"
+  - "/grimac alerts &f- &7\u5207\u6362\u8b66\u62a5"
+  - "/grimac profile <\u73a9\u5bb6\u6635\u79f0> &f- &7\u67e5\u770b\u73a9\u5bb6\u5ba2\u6237\u7aef\u4fe1\u606f"
+  - "/grimac help &f- &7\u67e5\u770b\u6b64\u5e2e\u52a9\u6d88\u606f"
+  - "/grimac debug <\u73a9\u5bb6\u6635\u79f0> &f- &7\u5f00\u53d1\u8005debug\u6a21\u5f0f"
+  - "/grimac perf &f- &7\u5f00\u53d1\u8005\u6beb\u79d2\u9884\u6d4b"
+  - "/grimac reload &f- &7\u91cd\u65b0\u52a0\u8f7d\u914d\u7f6e"
+  - "/grimac spectate <\u73a9\u5bb6\u6635\u79f0> &f- &7\u89c2\u5bdf\u73a9\u5bb6"
+  - "/grimac verbose &f- &f\u663e\u793a\u65e0\u7f13\u51b2\u533a\u7684\u6bcf\u4e2a\u62c9\u56de"
+  - "/grimac log [1-999] &f- &7\u9884\u6d4b\u6807\u5fd7\u7684\u8c03\u8bd5\u65e5\u5fd7"
+  - "&7======================"

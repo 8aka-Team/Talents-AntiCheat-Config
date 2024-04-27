@@ -1,0 +1,91 @@
+
+prefix: '&bMatrix &f» '
+
+kick-format: '玩家 %player% 出现异常行为被强制踢出服务器!'
+#踢出广播开关
+kick-broadcast: true
+
+spam-warning: '你不能如此快的发送聊天信息!'
+
+verbose-format: '&7%player% 触发 &2%check% &7模块 &8| &7%message% &b(+%add_vl%) &8| &7vl:%vl% 延迟:%ping% 服务器TPS:%tps% lp:%lp% component: %component% 版本: %version%'
+
+relog-message: '请等待 %time_left% 秒后重新进入!'
+
+global_placeholder: 
+  warn: "触发了检测模块"
+  k_c: "litebans:kick"
+  k_m: "&c您被踢出服务器!"
+  k_m_2: "%break%"
+  k_m_3: "&7理由: &7&o"
+  k_m_4: "%break%%break%如果有疑问请联系管理员处理！"
+  c_ka: "杀戮光环"
+  c_hb: "碰撞箱增大"
+  m_s: "异常移动"
+  b_p: "异常数据包"
+  d_a: "异常行为"
+  b_i: "异常方块交互"
+  s_f: "自动搭路"
+  w_w: "水上行走"
+  a_kb: "反击退"
+  c_s: "聊天刷屏"
+  h_i: "异常交互"
+  m_p: "移动穿墙"
+  e_f: "鞘翅飞行"
+  v_s: "载具加速"
+  c_pr: '&d'
+  c_hr: '&c谨慎处理'
+  c_ba: '&8|%gp_c_pr%'
+  c_hm: '%gp_c_pr%%version% 版本 %gp_c_ba% %ping% 延迟 %gp_c_ba% %tps% TPS %gp_c_ba% %component% %gp_c_ba% %gp_c_hr% %gp_c_ba%'
+  c_n: '&a'
+  c_w: '&e'
+
+
+commands:
+  verbose: '打开/隐藏 高级信息输出'
+  notify: '发送消息给所有在线OP'
+  toggle-notify: '是否接收在线消息'
+  npc: '生成假人检测玩家是否使用杀戮光环'
+  kick: '踢出玩家'
+  msg: '发送警告信息给玩家'
+  gui: '打开菜单'
+  violations: '打开违规菜单'
+  ping: '获取玩家的延迟'
+  cps: '获取玩家的点击速度'
+  reload: '重新载入矩阵'
+
+gui:
+  main:
+    toggle-checks:
+      name: '&a检测开关'
+      description: '&7点击打开检测菜单'
+    show-violations:
+      name: '&a查看违规'
+      description: '&7点击查看违规界面'
+    toggle-verbose:
+      name: '&a高级信息输出开关'
+      description: '&7点击 启用/禁用 高级信息输出'
+    reload-matrix:
+      name: '&c重载矩阵反作弊'
+      description: '&7重新加载矩阵反作弊的配置'
+    server-status:
+      name: '&b服务器状态'
+    support-links:
+      name: '&b支持链接'
+    premium-user:
+      name: '&b高级用户'
+    close-gui:
+      name: '&c关闭菜单'
+
+misc:
+  update:
+    start-checking: '正在检测更新....'
+    updater: '§a> 矩阵更新:'
+    has-update: '§c矩阵反作弊有更新: §f%latest%  §c版本: §2%current%'
+    latest: '§a你正在使用最前沿的矩阵反作弊版本 <3'
+    download-link: '§c下载链接'
+  premium:
+    pass: 'Premium version verification has passed!'
+    expire-time: 'Expire Time: %time%'
+  reload:
+    start-reload: '正在重新加载矩阵...'
+    reloaded: '重新加载矩阵.'

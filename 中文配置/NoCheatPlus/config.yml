@@ -1,0 +1,908 @@
+savebackconfig: true
+logging:
+  active: true
+  maxqueuesize: 5000
+  extended:
+    status: false
+    commands:
+      actions: false
+    allviolations:
+      debug: true
+      debugonly: false
+      backend:
+        trace: false
+        notify: false
+  backend:
+    console:
+      active: true
+      asynchronous: true
+    file:
+      active: true
+      prefix: ""
+      filename: nocheatplus.log
+    ingamechat:
+      active: true
+      prefix: "&f[&cNC+&f] &7 "
+data:
+  expiration:
+    active: false
+    duration: 60
+    history: false
+  consistencychecks:
+    active: true
+    interval: 10
+    maxtime: 2
+    suppresswarnings: false
+permissions:
+  policy:
+    default: ALWAYS
+    rules:
+      - "nocheatplus.notify :: INTERVAL:60, -world, -offline"
+      - "nocheatplus.admin.debug :: INTERVAL:10"
+      - "nocheatplus.admin* :: ALWAYS"
+      - "nocheatplus.command* :: ALWAYS"
+      - "nocheatplus.bypass* :: ALWAYS"
+      - 'regex:^nocheatplus\.checks\..*\.silent$ :: FALSE'
+      - "nocheatplus.checks* :: INTERVAL:6"
+protection:
+  plugins:
+    hide:
+      active: true
+      nopermission:
+        message: "&c真抱歉你不能使用该指令."
+        commands:
+          - plugins
+          - version
+          - icanhasbukkit
+          - bukkit:?
+          - bukkit:help
+          - bukkit:pl
+          - perm
+          - perms
+          - me
+          - bukkit:me
+          - lp
+          - luck
+          - null: null
+          - help
+          - nocheatplus
+          - aac
+          - ncp
+          - about
+          - matrix
+          - vulcan
+          - spartan
+          - bac
+          - sac
+          - trc
+      unknowncommand:
+        message: Unknown command. Type "/help" for help.
+        commands: []
+  commands:
+    consoleonly:
+      active: false
+      message: "&c真抱歉这些指令只能在控制台使用!"
+      commands:
+        - op
+        - deop
+        - plugins
+        - pl
+        - bukkit:?
+        - plugins
+        - version
+        - icanhasbukkit
+        - bukkit:?
+        - bukkit:help
+        - bukkit:pl
+        - perm
+        - perms
+        - me
+        - bukkit:me
+        - lp
+        - luck
+        - null: null
+        - help
+checks:
+  active: true
+  lag: true
+  debug: false
+  blockbreak:
+    active: default
+    direction:
+      active: default
+      actions: cancel
+    fastbreak:
+      active: default
+      strict: true
+      delay: 95
+      intervalsurvival: 100
+      grace: 1200
+      actions:
+        cancel vl>6 cancel log:fastbreak:4:2:i vl>20 cancel log:fastbreak:0:2:if
+        cmdc:kickfastbreak:2:5
+    frequency:
+      active: default
+      intervalcreative: 95
+      intervalsurvival: 45
+      shortterm:
+        ticks: 5
+        limit: 6
+      actions: cancel vl>40 log:bbfrequency:0:5:if cancel cmdc:kickfrequency:0:5
+    noswing:
+      active: default
+      actions: cancel vl>8 log:noswing:0:5:i cancel
+    reach:
+      active: default
+      actions: cancel vl>2
+    wrongblock:
+      active: default
+      level: 15
+      improbable:
+        feedonly: false
+        weight: 2.0
+      actions:
+        cancel vl>5 log:bwrong:2:5:i cancel vl>20 cancel log:bwrong:0:5:if
+        cmdc:kickwb:0:5
+  blockinteract:
+    active: default
+    direction:
+      active: default
+      actions:
+        cancel cancel vl>10 log:bdirection:4:8:i vl>45 cancel log:bdirection:1:5:if
+        cmdc:kickillegalblockinteract:1:5
+    reach:
+      active: default
+      actions: cancel vl>2 log:breach:5:6:i
+    speed:
+      active: default
+      interval: 2000
+      limit: 55
+      actions:
+        cancel vl>10 cancel log:bspeed:5:4:i cancel vl>500 cancel log:bspeed:0:5:icf
+        cmdc:kickbspeed:2:5
+    visible:
+      active: default
+      actions: cancel vl>30 log:bvisible:8:5:if cancel
+  blockplace:
+    active: default
+    against:
+      active: default
+      actions: cancel vl>2 log:against:1:5:i vl>10 cancel log:against:0:2:if cmdc:kickagainst:0:10
+    autosign:
+      active: default
+      skipempty: false
+      actions: cancel vl>5 log:bautosign:0:3:if cancel
+    direction:
+      active: default
+      actions: cancel
+    fastplace:
+      active: default
+      limit: 12
+      shortterm:
+        ticks: 10
+        limit: 8
+      improbable:
+        feedonly: false
+        weight: 0.3
+      actions:
+        cancel vl>5 cancel log:fastplace:8:3:i vl>20 cancel log:fastplace:2:4:i
+        vl>80 cancel log:fastplace:0:10:if cmdc:kickfastplace:1:10
+    reach:
+      active: default
+      actions: cancel vl>2
+    noswing:
+      active: default
+      exceptions:
+        - LILY_PAD
+        - FLINT_AND_STEEL
+      actions: cancel vl>5 log:noswing:2:5:i cancel
+    scaffold:
+      active: default
+      angle: true
+      sprint: true
+      time:
+        active: true
+        average: 2
+      rotate:
+        active: true
+        difference: 5
+      toolswitch: true
+      improbable:
+        feedonly: true
+        weight: 0.4
+      actions:
+        cancel vl>15 cancel log:scaffold:3:7:if vl>44 cancel log:scaffold:0:5:if
+        cmd:clearscaffold:0:1 cmdc:kickscaffold:0:1
+    speed:
+      active: default
+      interval: 20
+      improbable:
+        feedonly: true
+        weight: 0.3
+      actions: cancel vl>100 log:bpspeed:6:7:i cancel vl>1000 log:bpspeed:3:5:if cancel
+    preventmisc:
+      boatsanywhere: true
+  chat:
+    active: true
+    captcha:
+      active: "true"
+      skip:
+        commands: true
+      characters: abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!?><
+      length: 6
+      question: "&c&l(!)&7 请输入验证码 '&6[captcha]&7' 后再继续你的聊天."
+      success: "&c&l(!)&7 反刷屏严验证成功."
+      tries: 3
+      actions: cancel cmdc:kickcaptcha vl>4 log:captcha:2:5:cf cancel cmdc:kickcaptcha
+    commands:
+      active: default
+      exclusions:
+        - undo
+        - redo
+      handleaschat:
+        - me
+        - msg
+        - emsg
+        - essentials:msg
+        - tell
+        - etell
+        - essentials:tell
+        - say
+        - esay
+        - essentials:say
+        - whisper
+        - ewhisper
+        - essentials:whisper
+        - w
+        - essentials:w
+        - ew
+        - r
+        - er
+        - essentials:r
+        - reply
+        - essentials:reply
+        - ereply
+      level: 10
+      shortterm:
+        ticks: 18
+        level: 3
+      actions:
+        log:commands:0:5:cf cancel cmdc:kickcommands vl>20 log:commands:0:5:cf
+        cancel cmdc:tempkick1
+    text:
+      active: false
+      allowvlreset: true
+      frequency:
+        normal:
+          minimum: 0.0
+          factor: 0.9
+          weight: 6
+          level: 160
+          actions:
+            cancel cmdc:tellchatnormal vl>7 log:chatnormal:0:5:cif cancel cmdc:tellchatnormal
+            vl>20 log:chatnormal:0:5:cif cancel cmdc:kickchatnormal vl>40 log:chatnormal:0:5:cif
+            cancel cmdc:kickchat5
+        shortterm:
+          minimum: 2.0
+          factor: 0.7
+          weight: 3.0
+          level: 20.0
+          actions:
+            log:chatfast:2:3:icf cancel cmdc:kickchatfast:0:5 vl>20 cancel
+            log:chatfast:0:5:cif cmdc:kickchatfast vl>40 cancel log:chatfast:0:5:cif
+            cmdc:kickchat1
+      message:
+        lettercount: 1.0
+        partition: 1.0
+        uppercase: 1.2
+        afterjoin: 1.5
+        nomoving: 1.1
+        repeatviolation: 2.0
+        repeatglobal: 1.0
+        repeatself: 1.5
+        words:
+          lengthav: 1.0
+          lengthmsg: 1.0
+          noletter: 0.2
+      global:
+        active: true
+        weight: 1.0
+        words:
+          active: true
+        prefixes:
+          active: false
+        similarity:
+          active: true
+      player:
+        active: true
+        words:
+          active: true
+        prefixes:
+          active: true
+        similarity:
+          active: true
+    warning:
+      active: true
+      level: 67
+      message: "\n  &c&l(!)&7 请放慢你的聊天速度，否则你会以刷屏机器人的理由被踢出服务器.\n \n"
+      timeout: 11
+    relog:
+      active: default
+      timeout: 2750
+      warning:
+        message: "&c&l(!)&7 你重复发言非常快! 如果你继续这样做, 你将会被惩罚."
+        number: 1
+        timeout: 60000
+      kickmessage: 重新登录太快，请稍等一会重试.
+      actions: log:relog:0:10:cf cancel vl>20 log:relog:0:10:cf cancel cmdc:tempkick5
+    logins:
+      active: default
+      startupdelay: 600
+      perworldcount: false
+      seconds: 10
+      limit: 6
+      kickmessage: 太多玩家同时登录，请稍后重试.
+  combined:
+    active: default
+    enderpearl:
+      active: true
+      preventclickblock: true
+    improbable:
+      active: default
+      level: 250
+      actions:
+        cancel vl>20 log:improbable:8:9:if cancel vl>1500 cancel log:improbable:0:10:if
+        cmdc:kickimprobable:0:5
+    invulnerable:
+      active: true
+      triggers:
+        always: false
+        falldistance: true
+      initialticks:
+        join: -1
+      ignore:
+        - FALL
+      modifiers:
+        all: 0
+    munchhausen:
+      active: default
+      actions: cancel vl>100 cancel log:munchhausen:0:60:if
+    yawrate:
+      rate: 180
+      penalty:
+        factor: 2.0
+        minimum: 450
+        maximum: 2500
+      improbable:
+        feedonly: false
+        weight: 90.0
+  fight:
+    active: default
+    canceldead: true
+    maxloopletencyticks: 6
+    toolchangepenalty: 665
+    pvp:
+      knockbackvelocity: false
+    yawrate:
+      active: true
+    angle:
+      active: default
+      threshold:
+        average_move: 77
+        average_time: 110
+        average_yaw: 22
+        average_switch: 0
+      actions: cancel vl>100 log:angle:6:5:i cancel vl>350 log:angle:0:20:if cancel cmdc:kickangle:0:15
+    critical:
+      active: default
+      falldistance: 0.075
+      falldistleniency: 9.0E-4
+      actions:
+        cancel vl>5 cancel log:critical:6:10:i vl>60 cancel log:critical:0:5:icf
+        cmd:clearcritical:0:5 cmdc:kickcritical:0:2
+    direction:
+      active: default
+      strict: true
+      failall: true
+      penalty: 20
+      actions:
+        cancel vl>2 log:fdirectionlowvl:5:6:i vl>10 cancel log:fdirection:2:4:if
+        vl>50 cancel log:fdirection:0:7:icf cmdc:kicksuspiciouscombat:1:5
+    fastheal:
+      active: default
+      interval: 4000
+      buffer: 1000
+      actions:
+        cancel vl>10 cancel log:fastheal:2:6:i vl>30 cancel log:fastheal:1:1:i
+        vl>90 cancel log:fastheal:0:10:if cmdc:kickfastheal:0:10
+    godmode:
+      active: default
+      minage: 1100
+      maxage: 5000
+      actions: cancel vl>10 cancel log:godmode:0:5:icf cmdc:kickgod:0:5
+    impossiblehit:
+      active: default
+      improbable:
+        weight: 0.05
+      actions: cancel vl>3 cancel log:impossiblehit:0:5:if
+    noswing:
+      active: default
+      actions: cancel vl>2 cancel vl>10 log:noswing:2:5:i cancel
+    reach:
+      active: default
+      survivaldistance: 3.11
+      penalty: 10
+      reduce: true
+      precision: true
+      reducedistance: 1.2
+      reducestep: 0.14
+      improbable:
+        feedonly: true
+        weight: 2.0
+      actions:
+        cancel vl>2 cancel log:freach:8:9:i vl>4 cancel log:freach:2:6:i vl>6
+        cancel log:freachhighvl:1:5:if vl>8 cancel log:freachhighvl:0:5:if cmdc:kicksuspiciouscombat:2:1
+    selfhit:
+      active: default
+      actions: cancel log:fselfhit:0:5:icf cmdc:kickselfhit:0:5
+    speed:
+      active: default
+      limit: 24
+      actions:
+        cancel vl>10 cancel log:fspeed:2:5:i vl>60 cancel log:fspeed:0:5:if cmdc:kickattackfrequency:0:10
+      shortterm:
+        ticks: 7
+        limit: 24
+      improbable:
+        feedonly: false
+        weight: 1.0
+  inventory:
+    active: default
+    fastclick:
+      active: default
+      exclude:
+        - Inventory Name Here
+      sparecreative: true
+      tweaks1_5: true
+      limit:
+        shortterm: 6
+        normal: 18
+        chest: 250
+      improbable:
+        weight: 0.7
+      actions:
+        cancel vl>150 cancel log:fastclick:7:5:i vl>400 cancel log:fastclick:1:5:if
+        vl>3000 cancel log:fastclick:1:2:if cmdc:kickfastclick:2:5
+    instantbow:
+      active: default
+      strict: true
+      delay: 75
+      improbable:
+        feedonly: false
+        weight: 0.6
+      actions:
+        cancel vl>15 cancel log:instantbow:4:5:i vl>200 cancel log:instantbow:0:10:if
+        cmdc:kickbow:2:10
+    instanteat:
+      active: false
+      actions: log:instanteat:2:5:i cancel
+    fastconsume:
+      active: default
+      duration: 1.4
+      whitelist: false
+      items: []
+      actions:
+        cancel vl>2 log:fastconsume:2:5:if cancel vl>35 cancel log:fastconsume:0:5:if
+        cmdc:kickfastconsume:0:5
+    inventorymove:
+      active: default
+      disable_creative: true
+      hdistdivisor: 2
+      improbable:
+        feedonly: true
+        weight: 2.0
+      actions: cancel vl>10 log:inventorymove:7:8:i cancel
+    gutenberg:
+      active: default
+      pagelimit: 50
+      actions: cancel log:gutenberg:0:10:if cmdc:kickinvaliddata:0:5
+    items:
+      active: default
+    open:
+      active: default
+      close: true
+      cancelother: true
+    hotfix:
+      duplication:
+        fallingblockendportal: true
+  moving:
+    active: default
+    creativefly:
+      active: default
+      ignoreallowflight: true
+      ignorecreative: false
+      model:
+        creative:
+          horizontal:
+            speed: 100
+          vertical:
+            ascend:
+              speed: 100
+            maxheight: 128
+        spectator:
+          horizontal:
+            speed: 450
+          vertical:
+            ascend:
+              speed: 170
+            maxheight: 128
+          ground: false
+        levitation:
+          horizontal:
+            speed: 50
+          vertical:
+            ascend:
+              speed: 10
+            maxheight: 128
+            gravity: false
+          modifiers: false
+          ground: true
+        slowfalling:
+          horizontal:
+            speed: 65
+          vertical:
+            ascend:
+              speed: 0
+            maxheight: 128
+            gravity: false
+          modifiers: true
+          ground: true
+        riptiding:
+          horizontal:
+            speed: 700
+          vertical:
+            ascend:
+              speed: 600
+            maxheight: 128
+          modifiers: false
+        elytra:
+          horizontal:
+            speed: 666
+            modsprint: 1.0
+          vertical:
+            ascend:
+              speed: 0
+            maxheight: 128
+          modifiers: false
+          resetFwOnground: false
+          strict: true
+      actions:
+        cancel log:flyfile:3:5:f vl>100 cancel log:creativefly:8:9:i log:flyfile:0:10:f
+        vl>900 cancel log:creativefly:2:4:i log:flyfile:0:5:cf vl>2000 cancel log:creativefly:0:5:icf
+        cmd:clearcf:0:15 cmdc:kickfly:0:15
+    morepackets:
+      active: default
+      seconds: 2
+      epsideal: 20
+      epsmax: 22
+      burst:
+        packets: 15
+        directviolation: 10
+        epmviolation: 20
+      setbackage: 2
+      actions:
+        cancel vl>2 cancel log:morepackets:10:9:i vl>100 cancel log:morepackets:0:2:ifc
+        cmdc:kickpackets:0:10
+    nofall:
+      active: default
+      dealdamage: true
+      skipallowflight: true
+      resetonviolation: true
+      resetonteleport: true
+      resetonvehicle: true
+      anticriticals: true
+      actions: cancel vl>2 cancel log:nofall:0:5:if
+    passable:
+      active: default
+      actions:
+        cancel vl>15 cancel log:passable:7:9:i vl>100 cancel log:passable:1:4:if
+        cmd:clearpassable:3:15
+      untracked:
+        teleport:
+          active: true
+        command:
+          active: true
+          tryteleport: true
+          prefixes:
+            - sethome
+            - home set
+            - setwarp
+            - warp set
+            - setback
+            - set back
+            - back set
+            - warp
+            - home
+            - tp
+            - tpa
+            - tpask
+            - tpyes
+            - tphere
+    survivalfly:
+      active: default
+      stepheight: default
+      extended:
+        vertical-accounting: true
+        horizontal-accounting: true
+        step-accounting: true
+        noslow: true
+        reset-activeitem: true
+      leniency:
+        hbufmax: 0.5
+        violationfrequency:
+          active: true
+          debug: false
+          maxleniencyvl: 12
+          mintoadd: 5
+          morevls: 5
+          movecount: 10
+        freezecount: 30
+        freezeinair: true
+      setbackpolicy:
+        falldamage: true
+        voidtovoid: true
+      actions:
+        cancel log:flyfile:6:15:f vl>100 cancel log:survivalfly:10:11:i log:flyfile:6:15:f
+        vl>700 cancel log:survivalfly:8:5:i log:flyfile:1:3:f vl>800 cancel log:survivalflyhighvl:0:4:icf
+        cmd:clearsf:0:15 cmdc:kickfly:0:15
+      hover:
+        active: true
+        step: 4
+        ticks: 115
+        loginticks: 60
+        falldamage: true
+        sfviolation: 200
+    trace:
+      maxage: 30
+      maxsize: 30
+    velocity:
+      activationcounter: 20
+      activationticks: 140
+      strictinvalidation: true
+    splitmoves: default
+    ignorestance: default
+    tempkickillegal: true
+    loadchunks:
+      join: true
+      move: false
+      teleport: true
+      worldchange: true
+    sprintinggrace: 4.0
+    assumesprint: true
+    speedgrace: 4.0
+    enforcelocation: default
+    setback:
+      method: default
+    vehicle:
+      preventdestroyown: true
+      enforcelocation: default
+      schedulesetbacks: default
+      schedulesetpassenger: default
+      morepackets:
+        active: default
+        actions:
+          cancel vl>2 log:morepackets:2:5:if cancel vl>100 cancel log:morepackets:1:2:if
+          cmdc:kickpackets:2:10
+      envelope:
+        active: default
+        hdistcap:
+          default: 0.9
+          pig: 0.3
+        actions:
+          cancel vl>50 cancel log:vehicleenvelope:10:6:if vl>300 cancel log:vehicleenvelope:0:10:if
+          cmd:clearvehicle:0:15 cmdc:kickvehiclefly:0:10
+    message:
+      illegalplayermove: Illegal move.
+      illegalvehiclemove: Illegal vehicle move.
+  net:
+    active: default
+    attackfrequency:
+      active: default
+      limitforseconds:
+        half: 8
+        one: 15
+        two: 30
+        four: 60
+        eight: 95
+      improbable:
+        weight: 3.0
+      actions:
+        cancel vl>10 cancel log:attackfrequency:4:5:i vl>200 cancel log:attackfrequency:0:4:if
+        cmdc:kickattackfrequency
+    flyingfrequency:
+      active: default
+      seconds: 5
+      packetspersecond: 60
+      actions:
+        cancel vl>20 cancel log:flyingfrequency:3:2:i vl>500 cancel log:flyingfrequency:0:5:if
+        vl>1000 cancel log:flyingfrequency:0:2:icf cmdc:kickflyingfrequency:0:10
+      reduceredundant:
+        active: true
+        seconds: 3
+        actions: cancel
+    keepalivefrequency:
+      active: default
+      seconds: 20
+      actions:
+        cancel vl>10 cancel log:keepalive:2:6:i vl>60 cancel log:keepalive:0:10:icf
+        cmdc:kickalive:0:5
+    moving:
+      active: default
+      actions: cancel vl>17 cancel log:moving:10:15:i
+    packetfrequency:
+      active: true
+      limitpersecond: 550
+      seconds: 4
+      actions: cancel vl>2 cancel cmdc:kickpacketfrequency:0:5
+    sounddistance:
+      active: default
+      maxdistance: 320
+    superseded:
+      flying:
+        cancelwaiting: true
+    wrongturn:
+      active: default
+      actions: cancel log:wrongturn:0:15:icf cmdc:kickillegalrotations:0:10
+strings:
+  against: "&c[player]&7 触发检测 &c[check]&7: 试图将方块放在液体或空气上 &7(&cVL[violations]&7)"
+  angle: "&c[player]&7 触发检测 &c[check]&7: 试图同时击中很多实体 (标签: &6[tags]&7) &7(&cVL[violations]&7)"
+  attackfrequency:
+    "&c[player]&7 触发检测&c[check]&7: 似乎正在使用自动点击工具 (点击数据包: &6[packets]&7/限制框架:
+    &6[limit]&7, &6[tags]&7) &7(&cVL[violations]&7)"
+  bautosign: "&c[player]&7 触发检测 &c[check]&7: 似乎正在使用自动告示牌 (子检测: &6[tags]&7) &7(&cVL[violations]&7)"
+  bbfrequency: "&c[player]&7 触发检测 &c[check]&7: 试图一次性同时破坏大量的方块 &7(&cVL[violations]&7)"
+  bdirection: "&c[player]&7 触发检测 &c[check]&7: 试图在于视野以外的一个方块进行交互 &7(&cVL[violations]&7)"
+  bpspeed: "&c[player]&7 触发检测 &c[check]&7: 试图一次性发射很多的投掷物 &7(&cVL[violations]&7)"
+  breach: "&c[player]&7 触发检测 &c[check]&7: 试图和距离过远的方块进行交互 &7(&cVL[violations]&7)"
+  bspeed: "&c[player]&7 触发检测 &c[check]&7: 试图和方块进行高速交互 &7(&cVL[violations]&7)"
+  bvisible: "&c[player]&7 触发检测 &c[check]&7: 试图穿过墙壁与方块交互 &7(&cVL[violations]&7)"
+  bwrong: "&c[player]&7 触发检测 &c[check]&7: 试图破坏方块，但不完全破坏它 &7(&cVL[violations]&7)"
+  captcha: "[player] 聊天验证反复失败 &7(&cVL[violations]&7)"
+  chatfast: "&c[player]&7 触发检测 &c[check]&7: 表现的像刷屏小鬼（玩家的刷屏消息已删除） (IP: &6[ip]&7) &7(&cVL[violations]&7)"
+  chatnormal: "&c[player]&7 触发检测 &c[check]&7: 似乎正在使用刷屏器进行聊天 &7(&cVL[violations]&7)"
+  commands: "&c[player]&7 触发检测 &c[check]&7: 发送指令的速度太快了 &7(&cVL[violations]&7)"
+  creativefly:
+    "&c[player]&7 触发检测 &c[check]&7: 试图执行偏移模型的移动 (模块: &6[model]&7, 标签: &6[tags]&7)
+    &7(&cVL[violations]&7)"
+  critical: "&c[player]&7 触发检测 &c[check]&7: 试图使用刀刀暴击 (标签: &6[tags]&7) &7(&cVL[violations]&7)"
+  fastbreak: "&c[player]&7 触发检测 &c[check]&7: 试图快速破坏一个方块 (方块: &6[blocktype]&7) &7(&cVL[violations]&7)"
+  fastclick: "&c[player]&7 触发检测 &c[check]&7: 试图高速把物品移动至背包 (标签: &6[tags]&7) &7(&cVL[violations]&7)"
+  fastconsume: "&c[player]&7 触发检测 &c[check]&7: 试图快速食用食物 (食物: &6[food][tags]&7) &7(&cVL[violations]&7)"
+  fastheal: "&c[player]&7 触发检测 &c[check]&7: 试图使用漏洞快速回血 (血量: &6[health]&7) &7(&cVL[violations]&7)"
+  fastplace: "&c[player]&7 触发检测 &c[check]&7: 试图快速放置方块 &7(&cVL[violations]&7)"
+  fdirection: "&c[player]&7 触发检测 &c[check]&7: 试图击中他们视角以外的实体 &7(&cVL[violations]&7)"
+  fdirectionlowvl: "&c[player]&7 触发检测 &c[check]&7: 可能使用了自动瞄准 (未取消该玩家的攻击) &7(&cVL[violations]&7)"
+  flyfile:
+    "&c[player]&7 触发检测 &c[check]&7: 试图在坐标 ([locationfrom]) 到坐标 ([locationto])
+    中使用飞行漏洞移动 ([distance]) 个方块, 子检测模块已触发> ([tags]) &7(&cVL[violations]&7)"
+  flyingfrequency: "&c[player]&7 触发检测 &c[check]&7: 正在操控发送服务器的数据包以绕过飞行检测 &7(&cVL[violations]&7)"
+  freach: "&c[player]&7 触发检测 &c[check]&7: 试图从过远的距离攻击实体 (距离: &6[reachdistance]&7) &7(&cVL[violations]&7)"
+  fselfhit: "&c[player]&7 触发检测 &c[check]&7: 试图对自己造成伤害 &7(&cVL[violations]&7)"
+  fspeed: "&c[player]&7 触发检测 &c[check]&7: 尝试在限制CPS为 [limit]CPS 的限制上高速点击 &7(&cVL[violations]&7)"
+  godmode: "&c[player]&7 触发检测 &c[check]&7: 尝试忽略所有伤害 (血量: &7[health]&7) &7(&cVL[violations]&7)"
+  gutenberg: "&c[player]&7 触发检测 &c[check]&7: 创建了太多页面的书 &7(&cVL[violations]&7)"
+  impossiblehit:
+    "&c[player]&7 触发检测 &c[check]&7: 试图在执行另一个动作时攻击实体 (Tags: &6[tags]&7)
+    &7(&cVL[violations]&7)"
+  improbable: "&c[player]&7 触发检测 &c[check]&7: 表现出不稳定的行为 (Check: &6[tags]&7) &7(&cVL[violations]&7)"
+  instantbow: "&c[player]&7 触发检测 &c[check]&7: 试图用弓高速射出弓箭 &7(&cVL[violations]&7)"
+  instanteat: "&c[player]&7 触发检测 &c[check]&7: 试图过快的使用食物 (食物: &6[food]&7) &7(&cVL[violations]&7)"
+  inventorymove:
+    "&c[player]&7 触发检测 &c[check]&7: 试图边移动边修改背包里的物品 (Tags: &6[tags]&7)
+    &7(&cVL[violations]&7)"
+  keepalive: "&c[player]&7 触发检测 &c[check]&7: 正在向服务器发送心跳包以保持在线状态 &7(&cVL[violations]&7)"
+  kickangle: ncp kick [player] &c&l(!)&7 奇怪的攻击方式
+  kickfightreach: ncp kick [player] &c&l(!)&7 异常的攻击距离
+  kickagainst: ncp kick [player] &c&l(!)&7 无效的方块放置。
+  kickalive: ncp kick [player] &c&l(!)&7 保持活动状态的心跳包过多。
+  kickattackfrequency: ncp kick [player] &c&l(!)&7 不太可能存在的快速点击。
+  kickbow: ncp kick [player] &c&l(!)&7 射箭速度异常.
+  kickbspeed: ncp kick [player] &c&l(!)&7 与方块交互过快.
+  kickcaptcha: ncp kick [player] &c&l(!)&7 输入验证码!
+  kickchat1: ncp tempkick [player] 1 &c&l(!)&7 不要向服务器发送垃圾聊天信息 (一分钟的临时踢出)
+  kickchat5: ncp tempkick [player] 5 &c&l(!)&7 请你不要向服务器发送垃圾聊天信息 (五分钟的临时踢出)
+  kickchatfast: ncp kick [player] &c&l(!)&7 停止刷屏
+  kickchatnormal: ncp kick [player] &c&l(!)&7 短时间内的聊天消息太多了，请休息一下。
+  kickcommands: ncp tempkick [player] 1 &c&l(!)&7 不要发送刷屏命令（一分钟临时踢出）
+  kickcritical: ncp kick [player] &c&l(!)&7 不异常的行为动作 (异常暴击?)
+  kickfastbreak: ncp kick [player] &c&l(!)&7 破坏方块的速度过快
+  kickfastclick: ncp kick [player] &c&l(!)&7 不太可能的点击速度。
+  kickfastconsume: ncp kick [player] &c&l(!)&7 使用物品太快。
+  kickfastheal: ncp kick [player] &c&l(!)&7 生命恢复太快。
+  kickfastplace: ncp kick [player] &c&l(!)&7 防止方块的速度异常。
+  kickfly: ncp kick [player] &c&l(!)&7 移动异常。
+  kickflyingfrequency: ncp kick [player] &c&l(!)&7 因垃圾数据包而被踢出。
+  kickfrequency: ncp kick [player] &c&l(!)&7 疑似漏洞的方块破坏行为
+  kickgod: ncp kick [player] &c&l(!)&7 上帝模式?
+  kickillegalblockinteract: ncp kick [player] &c&l(!)&7 异常的方块交互。
+  kickillegalrotations: ncp kick [player] &c&l(!)&7 异常的转头。
+  kickimprobable: ncp kick [player] &c&l(!)&7 非法客户端修改。
+  kickinvaliddata: ncp kick [player] &c&l(!)&7 无效的书本数据。
+  kickpacketfrequency: ncp kick [player] &c&l(!)&7 数据包过多。
+  kickpackets: ncp kick [player] &c&l(!)&7 你发送了太多的动作（极度滞后）
+  kickscaffold: ncp kick [player] &c&l(!)&7 不自然的方块放置。
+  kickselfhit: ncp kick [player] &c&l(!)&7 你试图打自己!
+  kicksuspiciouscombat: ncp kick [player] &c&l(!)&7 非法客户端修改。
+  kickvehiclefly: ncp kick [player] &c&l(!)&7 异常的载具行为。
+  kickwb: ncp kick [player] &c&l(!)&7 破坏方块不同步。
+  freachhighvl:
+    "&c[player]&7 触发检测 &c[check]&7: 最有可能使用了杀戮光环进行作弊 (Reach: &6[reachdistance]&7)
+    &7(&cVL[violations]&7)"
+  morepackets: "&c[player]&7 触发检测 &c[check]&7: 发送了太多的数据包 (&cPackets&7/&cVL [packets]&7)"
+  moving: "&c[player]&7 触发检测 &c[check]&7: 试图发送不可能的位置进行更新 &7(&cVL[violations]&7)"
+  msgtempdenylogin: 您暂时不能加入该服务器.
+  munchhausen: "&c[player]&7 触发检测 &c[check]&7: 试图用钓鱼竿击中了很多次以绕过反击退检测 &7(&cVL[violations]&7)"
+  nofall: "&c[player]&7 触发检测 &c[check]&7: 试图忽略反掉落伤害 (标签: &6[tags]&7) &7(&cVL[violations]&7)"
+  noswing: "&c[player]&7 触发检测 &c[check]&7: 没有挥手动作 &7(&cVL[violations]&7)"
+  passable: "&c[player]&7 触发检测 &c[check]&7: 试图穿墙 &7(&cVL[violations]&7)"
+  relog: "&c[player]&7 触发检测 &c[check]&7: 可能使用了快速填充 &7(&cVL[violations]&7)"
+  scaffold: "&c[player]&7 触发检测 &c[check]&7: 可能在进行自动搭路操作 (标签: &6[tags]&7) &7(&cVL[violations]&7)"
+  survivalfly: "&c[player]&7 触发检测 &c[check]&7: 尝试在生存模式进行飞行 &7(&cVL[violations]&7)"
+  survivalflyhighvl: "&c[player]&7 触发检测 &c[check]&7: 可能进行了漏洞飞行 (子模块 &6[tags]&7) &7(&cVL[violations]&7)"
+  tellchatnormal: ncp tell [player] &c&l(!)&7 消息太多, 放慢速度...
+  tempkick1: ncp tempkick [player] 1 &c&l(!)&7 你现在要重新等待1分钟才能重新进入服务器.
+  tempkick5: ncp tempkick [player] 5 &c&l(!)&7 你现在要重新等待5分钟才能重新进入服务器.
+  vehicleenvelope:
+    "&c[player]&7 触发检测 &c[check]&7: 试图使用载具进行加速 (标签/载具: &6[tags]&7)
+    &7(&cVL[violations]&7)"
+  wrongturn: "&c[player]&7 触发检测 &c[check]&7: 试图在让头高速旋转 (&6>90 &7or&6 <-90&7) &7(&cVL[violations]&7)"
+  clearcritical: ncp removeplayer [player] FIGHT_CRITICAL
+  clearsf: ncp removeplayer [player] MOVING_SURVIVALFLY
+  clearcf: ncp removeplayer [player] MOVING_CREATIVEFLY
+  clearpassable: ncp removeplayer [player] MOVING_PASSABLE
+  clearvehicle: ncp removeplayer [player] MOVING_VEHICLE_ENVELOPE
+  clearscaffold: ncp removeplayer [player] BLOCKPLACE_SCAFFOLD
+compatibility:
+  exemptions:
+    wildcard:
+      default:
+        metadata:
+          active: true
+          keys:
+            - nocheat.exempt
+      npc:
+        active: true
+        bukkitnpc: true
+        metadata:
+          active: true
+          keys:
+            - NPC
+    remove:
+      join: true
+      leave: true
+  server:
+    cbdedicated:
+      enable: true
+    cbreflect:
+      enable: true
+  blocks:
+    breakingtime:
+      IRON_BLOCK:PICKAXE:DIAMOND:12: 1139
+    allowinstantbreak: []
+    overrideflags:
+      snow: default
+      moving_piston: default+ign_passable+ground_height
+    #如果你是1.18.2以下，可将minimalworldy的数值修改为0
+    blockcache:
+      minimalworldy: -64
+    changetracker:
+      active: true
+      pistons: true
+      maxageticks: 20
+      perworld:
+        maxentries: 1000
+configversion:
+  notify: true
+  notifymaxpaths: 5
+  created: 1154
+  saved: 1154

@@ -1,0 +1,120 @@
+AdvancedAbilities:
+  enabled: true
+  force: false
+CrackShot:
+  enabled: true
+  force: false
+CrackShotPlus:
+  enabled: true
+  force: false
+CraftBook:
+  enabled: true
+  force: false
+Essentials:
+  enabled: true
+  force: false
+MagicSpells:
+  enabled: true
+  force: false
+ProtocolLib:
+  enabled: true
+  force: false
+mcMMO:
+  enabled: true
+  force: false
+NoHitDelay:
+  enabled: true
+  force: false
+TreeFeller:
+  enabled: true
+  force: false
+VeinMiner:
+  enabled: true
+  force: false
+GrapplingHook:
+  enabled: true
+  force: false
+ViaRewind:
+  enabled: true
+  force: false
+RecentPvPMechanics:
+  enabled: true
+  force: false
+MineBomb:
+  enabled: true
+  force: false
+SmashHit:
+  enabled: true
+  force: false
+SuperPickaxe:
+  enabled: true
+  force: false
+RealDualWield:
+  enabled: true
+  force: false
+UltimateStatistics:
+  enabled: true
+  force: false
+MythicMobs:
+  enabled: true
+  force: false
+ViaVersion:
+  enabled: true
+  force: false
+ItemAttributes:
+  enabled: true
+  force: false
+PrinterMode:
+  enabled: true
+  force: false
+Vehicles:
+  enabled: true
+  force: false
+MineTinker:
+  enabled: true
+  force: false
+MinigameMaker:
+  enabled: true
+  force: false
+WildTools:
+  enabled: false
+  force: false
+DragonPhases:
+  enabled: true
+  force: false
+AureliumSkills:
+  enabled: true
+  force: false
+KnockbackMaster:
+  enabled: true
+  force: false
+MyPet:
+  enabled: true
+  force: false
+CustomEnchantsPlus:
+  enabled: true
+  force: false
+EcoEnchants:
+  enabled: true
+  force: false
+ItemsAdder:
+  enabled: true
+  force: false
+RampenDrills:
+  enabled: true
+  force: false
+OldCombatMechanics:
+  enabled: true
+  force: false
+CustomKnockback:
+  enabled: true
+  force: false
+ProjectKorra:
+  enabled: true
+  force: false
+AcidRain:
+  enabled: true
+  force: false
+MajorIncompatibility:
+  enabled: true
+  force: false

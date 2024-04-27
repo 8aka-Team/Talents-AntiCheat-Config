@@ -1,0 +1,74 @@
+# %check_name% - 检查名称
+# %vl% - 违规
+# %verbose% - 额外信息
+# %player% - 玩家名字
+# [alert] - 警告的特殊命令
+# [webhook] - 警告discord webhook 的特殊命令
+# [proxy] - special command to alert to other servers connected to your proxy (BungeeCord/Velocity)
+Punishments:
+  Simulation:
+    # 多少秒后重置VL
+    remove-violations-after: 60
+    checks:
+      - "Simulation"
+      - "GroundSpoof"
+      - "Timer"
+      - "NoFall"
+    commands:
+      - "100:40 [alert]"
+      - "250:100 Litebans:kick %player% &4&l非法客户端修改!"
+  Knockback:
+    remove-violations-after: 60
+    checks:
+      - "Knockback"
+      - "Explosion"
+    commands:
+      - "5:5 [alert]"
+      - "15:20 Litebans:kick %player% &4&l非法客户端修改!"
+  Post:
+    remove-violations-after: 60
+    checks:
+      - "Post"
+    commands:
+      - "20:20 [alert]"
+      - "40:40 Litebans:kick %player% &4&l非法客户端修改!"
+  BadPackets:
+    remove-violations-after: 60
+    checks:
+      - "BadPackets"
+      - "Crash"
+    commands:
+      - "20:20 [alert]"
+      - "40:40 Litebans:kick %player% &4&l非法客户端修改!"
+  Reach:
+    remove-violations-after: 60
+    checks:
+      - "Reach"
+    commands:
+      - "5:5 [alert]"
+      - "10:5 Litebans:kick %player% &4&l非法客户端修改!"
+  Misc:
+    remove-violations-after: 60
+    checks:
+      - "EntityControl"
+      - "NoSlow"
+      - "Place"
+      - "Baritone"
+      - "FastBreak"
+    commands:
+      - "10:5 [alert]"
+      - "20:10 Litebans:kick %player% &4&l非法客户端修改!"
+  Combat:
+    remove-violations-after: 60
+    checks:
+      - "Killaura"
+      - "Aim"
+    commands:
+      - "20:40 [alert]"
+  # Grim2.0.10版本 没有连点器检查，Grim将在未来添加
+  Autoclicker:
+    remove-violations-after: 60
+    checks:
+      - "Autoclicker"
+    commands:
+      - "20:40 [alert]"

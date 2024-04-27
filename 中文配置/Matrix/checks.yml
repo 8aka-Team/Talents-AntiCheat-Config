@@ -1,0 +1,484 @@
+#杀戮光环检测
+killaura:
+  enable: true
+
+  modules:
+    flaw:
+      type_a:
+        enable: true
+        vl: 5
+      type_b:
+        enable: true
+        vl: 10
+      type_c:
+        enable: true
+        vl: 10
+      type_d:
+        enable: true
+        vl: 10
+      type_e:
+        enable: true
+        vl: 5
+    rotation:
+      type_a:
+        enable: true
+        vl: 7
+      type_b:
+        enable: true
+        vl: 7
+
+    aimbot:
+      vl_weight: 10
+      cancel_hit: true
+
+      check_aimbot_sync: true
+      check_aimbot_shake: true
+      check_aimbot_snap: true
+      check_aimbot_sensitivity: true
+      check_aimbot_acceleration: true
+      check_aimbot_bad_rotation: true
+      check_aimbot_mouse_speed: true
+
+    npc:
+      enable: true
+      vl_weight: 12
+
+      async: true
+
+      real_entity_id: true
+
+      only_command_trigger: true
+
+      # 玩家是否能见到检测假人(true=可见/false=不可见)
+      visible: true
+
+      force_random_name: false
+
+      check_ticks:
+        base: 100
+        attack_add: 100
+        hit_bot_add: 150
+
+      movement:
+        distance_base: 2.8
+        distance_random_size: 1.23
+        distance_attack_base: 3.1
+        move_up_after_attack: false
+        max_speed: 0.33
+
+    critical:
+      enable: true
+
+      vl_weight: 25
+      cancel_attack: true
+
+    strafe:
+      enable: true
+      vl_weight: 8
+      cancel_move: true
+
+    combine:
+      aimbot_with_reach:
+        time: 5000
+        condition:
+          - "ka.abt.magic"
+          - "hb.reach"
+        action: 10 # +5 VL
+
+  decay:
+    interval: 15
+    amount: 5
+
+  commands:
+    8: 
+    - "matrix npc %player% 120"
+    20: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_c_ka%) %gp_c_n%<20VL> -h %gp_c_hm% -c "
+    30: "matrix notify &f%player% &7%gp_warn% &7(%gp_c_ka%) %gp_c_n%<30VL> -h %gp_c_hm% -c "
+    40: "matrix notify &f%player% &7%gp_warn% &7(%gp_c_ka%) %gp_c_w%<40VL> -h %gp_c_hm% -c "
+    48: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_c_ka%) %gp_c_w%<44VL> -h %gp_c_hm% -c "
+    56: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do %gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_c_ka%%gp_k_m_4%"
+    70: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_c_ka%%gp_k_m_4%"
+
+#碰撞箱检测
+hitbox:
+  enable: true
+
+  max_reach: 3.2
+
+  trace_back_length: 6
+
+  #  1. none   -  不阻挡
+  #  2. silent -  伤害设为0
+  #  3. cancel -  取消攻击
+  cancel_way: silent
+
+  cancel_vl: 5
+
+  vl_weights:
+    miss_player_hitbox: 4
+    reach_target_standing: 10
+    reach_target_moving: 4
+
+  dynamic_vl:
+    enable: true
+    expander: 10
+    min_vl: 5
+    max_vl: 24
+
+  max_burst_vl: 24
+
+  decay:
+    interval: 15
+    amount: 5
+
+  commands:
+    5:
+      - "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_c_hb%) %gp_c_n%<5VL> -h %gp_c_hm% -c "
+      - "matrix npc %player% 120"
+    8: "matrix notify &f%player% &7%gp_warn% &7(%gp_c_hb%) %gp_c_n%<8VL> -h %gp_c_hm% -c "
+    12: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_c_hb%) %gp_c_e%<12VL> -h %gp_c_hm% -c "
+    18: "matrix notify &f%player% &7%gp_warn% &7(%gp_c_hb%) %gp_c_e%<18VL> -h %gp_c_hm% -c "
+    20: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do %gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_c_hb%%gp_k_m_4%"
+    24: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_c_hb%%gp_k_m_4%"
+
+#点击检测
+click:
+  enable: true
+
+  max_cps: 20
+
+  check_cps: true
+  check_swing: true
+  check_timing: true
+
+  dynamic_cps_vl_weight: true
+
+  buffer_size: 20
+
+  decay:
+    interval: 15
+    amount: 5
+
+  commands:
+    8: "%gp_k_c% %player% illegalclicker"
+
+#移动检测（除非你有替代move检测，否则不要关闭它）
+move:
+  enable: true
+
+  check_noslow: true
+  
+  check_nofall: true
+
+  cancel_vl: 40
+
+  apply_damage: true
+
+  allow_bpe_bridge: false
+  #检测拥有合法飞行的玩家（应该
+  check_flying_players: true
+  #检测玩家打开背包后依然可以进行移动
+  check_inventory_move: true
+  
+  #此选项不可用，功能已经删除
+  force_setback_situations:
+    high_jump: true
+    ground_spoof_jump: true
+    bad_jumps: true
+    air_accel: true
+    air_mdf: true
+    step: true
+
+  allow_setback_to_void: true
+
+  decay:
+    interval: 10
+    amount: 50
+
+  commands:
+    85: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% (%gp_m_s%) %gp_c_n%<85VL> -h %gp_c_hm% -c "
+    100: "matrix notify &f%player% &7%gp_warn% (%gp_m_s%) %gp_c_n%<100VL> -h %gp_c_hm% -c "
+    140: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% (%gp_m_s%) %gp_c_w%<140VL> -h %gp_c_hm% -c "
+    160: "matrix notify &f%player% &7%gp_warn% (%gp_m_s%) %gp_c_w%<160VL> -h %gp_c_hm% -c "
+    180: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do %gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_m_s%%gp_k_m_4%"
+    210: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_m_s%%gp_k_m_4%"
+
+#错误数据包检测（除非你有替代timer检测，否则不要关闭它
+badpackets:
+  enable: true
+  #检测玩家是否在空气上放置方块
+  check_air_place: true
+
+  decay:
+    interval: 15
+    amount: 25
+
+  commands:
+    80: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% (%gp_b_p%) %gp_c_n%<80VL> -h %gp_c_hm% -c "
+    120: "matrix notify &f%player% &7%gp_warn% (%gp_b_p%) %gp_c_n%<120VL> -h %gp_c_hm% -c "
+    160: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% (%gp_b_p%) %gp_c_w%<160VL> -h %gp_c_hm%"
+    180: "matrix notify &f%player% &7%gp_warn% (%gp_b_p%) %gp_c_w%<180VL> -h %gp_c_hm% -c "
+    200: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do %gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_b_p%%gp_k_m_4%"
+    250: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_b_p%%gp_k_m_4%"
+
+#使用物品延迟检测
+delay:
+  enable: true
+ 
+  cancel_action: true
+
+  check_healing: 1
+  check_using_items: 1
+  check_using_bow: 1
+  check_auto_splash: 1
+  check_inventory_action: -1
+  check_auto_totem: 1
+  check_fast_throw: 1
+
+  decay:
+    interval: 15
+    amount: 2
+
+  commands:
+    2: "matrix notify &f%player% &7%gp_warn% (%gp_d_a%) %gp_c_n%<2VL> -h %gp_c_hm% -c "
+    4: "matrix notify &f%player% &7%gp_warn% (%gp_d_a%) %gp_c_w%<4VL> -h %gp_c_hm% -c "
+
+#方块检测
+block:
+  enable: true
+
+  cancel_vl: 4
+
+  modules:
+    fastbreak:
+      enable: true
+      vl_weight: 4
+    fastplace:
+      enable: true
+      vl_weight: 7
+      max_place_per_second: 11
+    noswing:
+      enable: true
+      vl_weight: 1
+    abort:
+      enable: true
+      vl_weight: 1
+
+  decay:
+    interval: 15
+    amount: 8
+
+  commands:
+    4: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_b_i%) %gp_c_n%<4VL> -h %gp_c_hm% -c "
+    8: "matrix notify &f%player% &7%gp_warn% &7(%gp_b_i%) %gp_c_n%<8VL> -h %gp_c_hm% -c "
+    12: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_b_i%) %gp_c_w%<12VL> -h %gp_c_hm% -c "
+    16: "matrix notify &f%player% &7%gp_warn% &7(%gp_b_i%) %gp_c_w%<16VL> -h %gp_c_hm% -c "
+    20: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do %gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_b_i%%gp_k_m_4%"
+    24: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_b_i%%gp_k_m_4%"
+
+#自动搭路检测
+scaffold:
+  enable: true
+
+  cancel_vl: 10
+
+  modules:
+    place:
+      enable: true
+      vl_weight: 2
+      check_jump: true
+
+    delay:
+      enable: true
+      vl_weight: 2
+      cancel_place: true
+      min_delay: 2
+      min_delay_diagonal: 3
+
+    right_cps:
+      enable: false
+      vl_weight: 2
+      max_cps: 29
+
+    tower:
+      enable: true
+      vl_weight: 2
+
+  decay:
+    interval: 15
+    amount: 6
+
+  commands:
+    10: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_s_f%) %gp_c_n%<10VL> -h %gp_c_hm% -c "
+    14: "matrix notify &f%player% &7%gp_warn% &7(%gp_s_f%) %gp_c_n%<14VL> -h %gp_c_hm% -c "
+    20: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_s_f%) %gp_c_w%<20VL> -h %gp_c_hm% -c "
+    28: "matrix notify &f%player% &7%gp_warn% &7(%gp_s_f%) %gp_c_w%<28VL> -h %gp_c_hm% -c "
+    30: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do %gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_s_f%%gp_k_m_4%"
+    36: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_s_f%%gp_k_m_4%"
+
+#水上行走
+jesus:
+  enable: true
+
+  cancel_vl: 15
+  #忽略正在游泳的玩家
+  #防止游泳状态不同步问题
+  ignore_swim_pose: true
+
+  decay:
+    interval: 10
+    amount: 10
+
+  commands:
+    15: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_w_w%) %gp_c_n%<15VL> -h %gp_c_hm% -c "
+    20: "matrix notify &f%player% &7%gp_warn% &7(%gp_w_w%) %gp_c_n%<20VL> -h %gp_c_hm% -c "
+    25: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_w_w%) %gp_c_w%<25VL> -h %gp_c_hm% -c "
+    30: "matrix notify &f%player% &7%gp_warn% &7(%gp_w_w%) %gp_c_w%<30VL> -h %gp_c_hm% -c "
+    35: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do %gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_w_w%%gp_k_m_4%"
+    45: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_w_w%%gp_k_m_4%"
+
+#无击退
+velocity:
+  enable: true
+  #出现问题改回默认值(20)
+  wait_time: 10
+
+  ignore_lag: true
+
+  modules:
+    respond: 5
+    analyser: 3
+    vertical: 4
+
+  decay:
+    interval: 15
+    amount: 3
+
+  commands:
+    10: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_a_kb%) %gp_c_n%<10VL> -h %gp_c_hm% -c "
+    15: "matrix notify &f%player% &7%gp_warn% &7(%gp_a_kb%) %gp_c_n%<15VL> -h %gp_c_hm% -c "
+    20: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_a_kb%) %gp_c_w%<20VL> -h %gp_c_hm% -c "
+    25: "matrix notify &f%player% &7%gp_warn% &7(%gp_a_kb%) %gp_c_w%<25VL> -h %gp_c_hm% -c "
+    30: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do %gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_a_kb%%gp_k_m_4%"
+    40: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_a_kb%%gp_k_m_4%"
+
+#聊天检测
+chat:
+  enable: false
+
+  min_time: 3
+
+  cancel_vl: 3
+
+  decay:
+    interval: 30
+    amount: 5
+
+  commands:
+    4: "matrix notify &f%player% &7%gp_warn% &7(%gp_c_s%) -h %gp_c_hm% -c "
+    10: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_c_s%%gp_k_m_4%"
+
+#点击检测
+interact:
+  enable: true
+  # mode v1 老版本
+  # mode v2 只支持主流以及最新版本
+  #(1.8/1.12/1.19+)
+  mode: "v2"
+  #严格模式（可能导致更多误判）
+  strict: false
+
+  check_interact_block: true
+  check_attack: true
+
+  decay:
+    interval: 10
+    amount: 5
+
+  commands:
+    10: "matrix notify &f%player% &7%gp_warn% &7(%gp_h_i%) %gp_c_n%<10VL> -h %gp_c_hm% -c "
+    20: "matrix notify &f%player% &7%gp_warn% &7(%gp_h_i%) %gp_c_w%<20VL> -h %gp_c_hm% -c "
+    30: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_h_i%%gp_k_m_4%"
+
+#穿墙检测
+phase:
+  enable: true
+  #触发此检测应该冻结玩家多久？
+  #出现问题改回默认值（400）
+  freeze_time: 110
+
+  cancel_vl: 3
+
+  exclude_types: []
+
+  decay:
+    interval: 15
+    amount: 10
+
+  commands:
+    3: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_m_p%) %gp_c_n%<3VL> -h %gp_c_hm% -c "
+    6: "matrix notify &f%player% &7%gp_warn% &7(%gp_m_p%) %gp_c_n%<6VL> -h %gp_c_hm% -c "
+    9: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do matrix notify &f%player% &7%gp_warn% &7(%gp_m_p%) %gp_c_w%<9VL> -h %gp_c_hm% -c "
+    12: "matrix notify &f%player% &7%gp_warn% &7(%gp_m_p%) %gp_c_w%<12VL> -h %gp_c_hm% -c "
+    16: "coc %player% if -ping-<60&-tps->19.5&-time_online->10000 do %gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_m_p%%gp_k_m_4%"
+    18: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_m_p%%gp_k_m_4%"
+
+#自动机器人(非生存没必要开)
+autobot:
+  enable: false
+
+  decay:
+    interval: 15
+    amount: 2
+
+  commands:
+    5: "matrix notify %player% suspected use of automatic robots (AutoBot)"
+    10: "matrix notify %player% suspected use of automatic robots (AutoBot) #2"
+    15: "matrix kick %player% Auto-Bot"
+
+#鞘翅检测
+elytra:
+  enable: true
+
+  force_setback: false
+
+  setback_vl: 45
+
+  unequip_vl: 45
+
+  decay:
+    interval: 15
+    amount: 15
+
+  commands:
+    25: "matrix notify &f%player% &7%gp_warn% &7(%gp_e_f%) %gp_c_n%<45VL> -h %gp_c_hm% -c "
+    45: "matrix notify &f%player% &7%gp_warn% &7(%gp_e_f%) %gp_c_w%<60VL> -h %gp_c_hm% -c "
+    70: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_e_f%%gp_k_m_4%"
+
+#载具检测
+vehicle:
+  enable: true
+  #不允许玩家使用的载具
+  deny_entity_types_as_vehicle:
+    - "LLAMA"
+
+  speed:
+    enable: true
+
+    setback_vl: 2
+
+  flight:
+    enable: true
+
+    setback_vl: 4
+
+    leave_vehicle: 10
+
+  decay:
+    interval: 15
+    amount: 5
+
+  commands:
+    2: "matrix notify &f%player% &7%gp_warn% &7(%gp_v_s%) %gp_c_n%<2VL> -h %gp_c_hm% -c "
+    4: "matrix notify &f%player% &7%gp_warn% &7(%gp_v_s%) %gp_c_w%<4VL> -h %gp_c_hm% -c "
+    8: "%gp_k_c% %player% %gp_k_m%%gp_k_m_2%%gp_k_m_3%%gp_v_s%%gp_k_m_4%"

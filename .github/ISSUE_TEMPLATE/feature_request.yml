@@ -1,0 +1,33 @@
+name: 申请配置
+description: '申请你想要的新的反作弊搭配组合的配置.'
+title: "[新配置] "
+labels: [enhancement]
+body:
+- type: textarea
+  id: ofbug
+  attributes:
+    label: 此请求是否与错误有关?
+    description: |
+      给我们一些关于这个问题的细节，以及它是如何影响它的.
+    placeholder: '示例: 反作弊配置出现了问题，需要改进和升级，.'
+  validations:
+    required: false
+
+- type: textarea
+  id: new
+  attributes:
+    label: 描述请求.
+    description: |
+      您希望看到哪些更改、添加或删除？确保具体。.
+    placeholder: '示例：希望添加nocheatplus+vulcan的组合搭配.'
+  validations:
+    required: false
+
+- type: textarea
+  id: more
+  attributes:
+    label: 还有别的吗？?
+    description: |
+      在此处添加有关该问题的任何其他上下文。
+  validations:
+    required: false

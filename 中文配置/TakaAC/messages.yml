@@ -1,0 +1,91 @@
+###################################
+#Taka Anti-Cheat                  #
+#                                 #
+#Created by dani02                #
+###################################
+#
+#Notes:
+#1. Checks without "cancelMove" are move canceled immediately!
+#2. %m% - mode, %player% = player, %hack% = hack, %vl% = violation.
+#3. TAC supports multi commanding.
+#4. CancelMove VL is different than Threshold's VL, when CancelMove VLs are reached then Threshold's VL will be added.
+#5. Check if your config is written correctly: http://yaml-online-parser.appspot.com/.
+
+#
+#DO NOT CHANGE
+#
+messages-version: 1.0
+#
+#Prefix:
+anticheat-prefix: "&5[&dTaka&bAC&5]"
+#
+#Admin permission:
+anticheat-admin-permission: TAC.Admin
+#
+#Bypass permission:
+anticheat-bypass-permission: TAC.Bypass
+#
+#Admin staff mode message:
+anticheat-admin-staff-mode-message: "&7管理员模式设置为 &6%m%&7."
+#
+#Admin verbose mode message:
+anticheat-admin-verbose-mode-message: "&7消息模式设置为 &6%m%&7."
+#
+#Admin verbose mode type message:
+anticheat-admin-verbose-mode-type-message: "&7消息模式类型设置为 &6%m%&7."
+#
+#Insufficient permissions message:
+anticheat-no-permission-message: "你没有权限这样做!"
+#
+#Report complete message:
+anticheat-report-complete-message: "&6感谢您的举报，很快就会审查."
+#
+#Report staff message
+#placeholders: %player% - reporter, %rep% - reported
+anticheat-report-staff-message: "&cREPORT: &6%player% 举报了 %rep%"
+#
+#VL Verbose Message
+#placeholders: %player% - hacker, %hack% - hack, %vl% - violation, %moveCancelViolation% -
+#violation level, at which the player's action is canceled
+anticheat-verbose-message: "&6%player% violated &c&l%hack%&r&6, &bvl=%vl%&6 -> vl > %moveCancelViolation%"
+#
+#VL Reset Message
+anticheat-vl-cleaner-message: "所有违规行为都已重置."
+#
+#Teleport to hacker message
+#placeholders: %player% - hacker
+anticheat-teleport-to-hacker-message: "You have been teleported to &6%player%"
+#
+#TReport GUI Title
+anticheat-treport-gui-title: "TakaAC - Reports"
+#
+#World enable/disable
+#placeholders: %world% - The name of the world
+anticheat-world-enable-message: "世界 &6%world% &a将由 &4TAKA &a进行检测!"
+#
+anticheat-world-disable-message: "世界 &6%world% &c不再由 &4TAKA &a进行检测!"
+#
+#Log Command format
+#placeholders: %time% - The time at which the player is detected, %hack% - For hack
+#%count% - How many times 'till now 
+log_format: "&7&l[%time%]: &c&l%hack% &a: &d&l%count%"
+#
+#AutoRespawn
+autorespawn-kickMsg: "&c请禁用AutoRespawn"
+#
+#Chat
+#
+#Captcha
+chat-captcha-first-message: "&7输入下面的验证码:"
+chat-captcha-success-message: "&7验证通过了，欢迎在我们的服务器中度过愉快的时光!"
+chat-captcha-kick-message: "验证码无效"
+chat-captcha-numbers-color-code: "&6"
+#
+#Chat Spam
+chat-spam-message: '请放慢聊天速度!'
+#
+#Chat badwords
+chat-badwords-player-message: "&c注意你的语言!"
+#
+#Command Spam
+command-spam-message: "请放慢聊天的速度"
