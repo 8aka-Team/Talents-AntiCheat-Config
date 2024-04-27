@@ -3,11 +3,10 @@
 
 [English](https://github.com/CkaDebug/Talents-AntiCheat-Config/blob/main/English-config/en-readme.md)
 
->
 > 
-> 如果你遇到配置問題請自行调试
+> ---
 > 
-> （但不要**发布**或**出售**并声称是你的**原创**配置）
+> 不要对此配置进行**发布**或**出售**并声称是你的**原创**配置
 >
 > ## 👇一些使用我配置并出售倒卖且声称是自己原创的人们👇
 >
@@ -145,11 +144,11 @@
 
 <div align="left">
 
-- [Winds-anticheat-config](https://github.com/Winds-Studio/winds-anticheat-config)
+- [Winds-anticheat-config](https://github.com/Winds-Studio/winds-anticheat-config) 
 
-- [Flex-AntiCheat](https://github.com/ItsMennyo/Flex-AntiCheat)
+- [Flex-AntiCheat](https://github.com/ItsMennyo/Flex-AntiCheat) (R.I.P)
 
-- [MatrixChecks](https://github.com/Encode42/MatrixChecks)
+- [MatrixChecks](https://github.com/Encode42/MatrixChecks) （R.I.P)
 
 - TAC v1/v2/v3/v4 (R.I.P)
 
@@ -160,7 +159,7 @@
 
 ## 🎶稍等一下🎶
 
-### 在离开之前，请先看看我向您推荐的优秀项目!!
+### 在离开之前，请先看看其他的优秀项目!!
 
 <img src="leaf_banner.png" alt="Leaf">
 <div align="center">
