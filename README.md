@@ -45,11 +45,9 @@
 
 <div align="center">
  
-<img src=".github/assets/talentsaclogo.png" align="center" id="header" width="500">
+<img src=".github/assets/talentsaclogo.png" align="center" id="header" width="1200">
 
 <div align="center">
-
-*icon for bing*
  
  ## 🛡人才反作弊配置🛡
  
