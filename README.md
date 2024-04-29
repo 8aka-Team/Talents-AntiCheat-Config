@@ -1,9 +1,6 @@
 
 # ⚠️前言 ⚠️
 
-[English](https://github.com/CkaDebug/Talents-AntiCheat-Config/blob/main/English-config/en-readme.md)
-
-
 > ---
 > 
 > 不要对此配置进行**发布**或**出售**并声称是你的**原创**配置
