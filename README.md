@@ -102,6 +102,7 @@
 - [Themis](https://www.spigotmc.org/resources/themis-anti-cheat-1-17-1-18-1-19-bedrock-support-paper-compatibility-free-optimized.90766/) 
 - [Hawk](https://github.com/HawkAnticheat/Hawk) 
 - [Foxaddition](https://www.spigotmc.org/resources/foxaddition-anti-cheat-1-7-2-1-20-4-geyser-support.111260/) 
+- [LightAntiCheat](https://www.spigotmc.org/resources/lightanticheat-1-8-1-20-6-geyser-folia-support.112053/updates)
 - [AAC](https://www.spigotmc.org/resources/aac-advanced-anti-cheat-hack-kill-aura-blocker.6442)
 - [TakaAC](https://www.spigotmc.org/resources/taka-anticheat-takaac-cheap-and-reliable-solution.45167/) 
 - [Horizon](https://www.spigotmc.org/resources/horizon-powerful-cheat-detection-in-new-era-1-8-1-12-1-13-1-14.65830/) 

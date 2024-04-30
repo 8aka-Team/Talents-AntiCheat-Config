@@ -1,0 +1,1098 @@
+enabled: true
+
+## Customizable plugin messages
+messages:
+  prefix: '&8(&bLight&8)&f'
+  # Hex colors are supported since MC 1.16. Example: &#FF450E
+  # In MC 1.13-1.15, the hex colors are replaced with the nearest Bukkit colors
+  hex-color-codes: true
+  # A local placeholder is a placeholder that can only be used in the following message
+  # All the global placeholder can be found below
+  command-messages:
+    help:
+      message: '%prefix% LightAntiCheat %version% 正在运行'
+    reload:
+      # Local placeholders: %time%
+      message: '%prefix% 成功重新加载配置文件 &7(%time%ms)'
+    alerts:
+      toggled-on-message: '%prefix% 启用警报消息!'
+      toggled-off-message: '%prefix% 禁用警报消息!'
+    tps:
+      # Local placeholders: %tps%
+      message: '%prefix% 过去 30 秒的 TPS: &f%tps%'
+    ping:
+      # Local placeholders: %ping%, %connection-stability%
+      message: '%prefix% %name%&7''s ping is &f%ping% &7(&f%connection-stability%&7 stability)'
+      connection-stability:
+        high: '&ahigh&r'
+        medium: '&emedium&r'
+        low: '&clow&r'
+    client:
+      # Local placeholders: %client-brand%
+      message: '%prefix% %name%&7''使用的客户端是 &f%client-brand%'
+    cps:
+      # Local placeholders: %cps%
+      message: '%prefix% %name%&7''的CPS速度是 &f%cps%'
+    checks:
+      # Local placeholders: %checks%, %movement_checks%, %combat_checks%,
+      # %interaction_checks%, %inventory_checks%, %packet_checks%
+      message: '%prefix% Checks: %checks%'
+  error-messages:
+    no-permission: '%prefix% 你没有权限使用s'
+    # Local placeholders: %usage%
+    invalid-format: '%prefix% Usage: &7%usage%'
+
+## In game notifications of violations or/and punishments
+alerts:
+  broadcast-violations:
+    enabled: true
+    message: '%prefix% %name% 触发了检测 %check% (%vio%/%punishment-vio%)'
+    # Broadcasts violations of a player no more than 1 time in X ms
+    cooldown: 0
+    # Leave this field empty not to hover any text
+    on-hover: '&7Check: &#FF450E%check% (%check-description%)%new-line%&7World: &#FF450E%world%%new-line%&7Cords:
+      &#FF450E%x% %y% %z%%new-line%&7Client: &#FF450E%client-brand%'
+    # Local placeholders: %teleport-location%
+    on-click: /light teleport %teleport-location%
+  broadcast-punishments:
+    enabled: true
+    message: '%prefix% %name% 因为使用 %check% 而被惩罚'
+    # Broadcasts punishments of a player no more than 1 time in X ms
+    cooldown: 0
+    # Leave this field empty not to hover any text
+    on-hover: '&7Check: &#FF450E%check% (%check-description%)%new-line%&7World: &#FF450E%world%%new-line%&7Cords:
+      &#FF450E%x% %y% %z%%new-line%&7Client: &#FF450E%client-brand%'
+    # Local placeholders: %teleport-location%
+    on-click: /light teleport %teleport-location%
+
+## Log file
+log:
+  enabled: true
+  file: logs/%date-day%.log
+  # Global placeholders: %prefix%, %version%, %name%, %uuid%, %ip%,
+  # %check%, %check-type%, %check-description%
+  # %vio%, %punishment-vio%, %setback-vio%,
+  # %tps%, %%edition%, %ping%, %connection-stability%,
+  # %world%, %x%, %y%, %z%, %client-brand%
+  # %date-day%, %date-hrs%, %date-min%, %date-sec%
+  log-violations:
+    enabled: true
+    message: '(%date-sec%) %name% was flagged [Check: %check% (%check-description%)] [Violations:
+      %vio%/%punishment-vio%] [TPS: %tps%] [Ping: %ping%ms (%connection-stability% stability)]
+      [Client: %client-brand%] [Location: %world% %x% %y% %z%]'
+    # Logs violations of a player no more than every X 1 time in X ms
+    cooldown: 1000
+  log-punishments:
+    enabled: true
+    message: '(%date-sec%) %name% was punished [Check: %check% (%check-description%)]
+      [Violations: %vio%/%punishment-vio%] [TPS: %tps%]  [Ping: %ping%ms (%connection-stability%
+      stability)] [Client: %client-brand%] [Location: %world% %x% %y% %z%]'
+    # Logs punishments of a player no more frequently than 1 time in X ms
+    cooldown: 0
+
+## Discord notifications of violations or/and punishments
+discord-webhook:
+  enabled: false
+  # You can create a webhook for your Discord server in
+  # Server Settings -> Integrations -> Webhooks -> New Webhook
+  send-violations:
+    enabled: false
+    webhook-url: ''
+    message: '```%name% was flagged for %check% (%check-description%) (%vio%/%punishment-vio%)```'
+    cooldown: 2000
+  send-punishments:
+    enabled: false
+    #This url can either be the same as the first one or different
+    webhook-url: ''
+    message: '```%name% was punished for %check% (%check-description%)```'
+    cooldown: 0
+
+## Specific bypass permissions
+permission:
+  # 'lightanticheat.bypess.flight_a' is a specific bypass permission
+  # Whether the specific bypass permissions should be enabled
+  per-check-bypass-permission: false
+  # If set to 'true', all the bypass permissions are disabled
+  disable-all-bypass-permissions: false
+
+## Violation reset
+violation:
+  reset:
+    # The interval in which violations are reset
+    reset-interval: 180
+  cache:
+    enabled: true
+    # Saves the player's violations for X seconds after the player leaves
+    # If set to '0', the player's violation are reset when player quits
+    cache-duration: 180
+
+## Lag conditions under which the detection should be disabled
+lag-protection:
+  # Stops the checks if the server doesn't respond for X ms
+  tick-threshold: 1000
+  # Disables the checks on join for X ms
+  ignore-time-on-join: 0
+  # Disables the checks on teleportation to unloaded chunks for X ms
+  ignore-time-on-teleport: 0
+  # Prevents gliding and riptiding players from entering into unloaded chunks
+  prevent-entering-into-unloaded-chucks: true
+
+## Basically, there is no need to configure 'geyser-hook' selection,
+## unless the Geyser player linking is enabled and uses a local database
+geyser-hook:
+  enabled: true
+  floodgate:
+    # Whether a player marked with Floodgate API 2.0+ counted as Bedrock players
+    enabled: true
+  uuid:
+    # Whether a player whose UUID starts with '000000' counted as Bedrock players
+    enabled: true
+  prefix:
+    # Whether a player whose name starts with the prefix counted as Bedrock players
+    enabled: true
+    prefix-string: .
+
+## The update checker will let you know if a newer version is available
+update-checker:
+  enabled: false
+  notification:
+    console:
+      enabled: false
+      # Local placeholders: %latest-version%
+      message: '%prefix% LightAntiCheat %latest-version% is available!'
+    on-join:
+      enabled: false
+      # Local placeholders: %latest-version%
+      message: '%prefix% LightAntiCheat %latest-version% is available!'
+      # Whether 'lightanticheat.alerts.notify' permission should be required
+      require-permission: true
+
+# BStats is an anonymous way of getting the average metrics of the servers
+# running the plugin. Check out LightAntiCheat's page on 'bstats.org'
+bstats:
+  # The plugin is completely free, and it's always nice to know that
+  # it's useful for someone. If you care, don't disable the metrics
+  enabled: true
+
+## It's not recommended to disable the API unless it causes any issues
+api:
+  # Whether the developer API is enabled
+  # The API can be used be other plugins
+  enabled: true
+
+checks:
+  # Movement checks
+  movement:
+    flight:
+      flight_a:
+        # Whether this check is enabled
+        enabled: true
+        # The punishment commands
+        punishment:
+          # Should the punishment commands be executed
+          punishable: true
+          # After X violations, the punishment commands are run
+          punishment-vio: 1
+          # The commands
+          commands:
+          - kick %name% %check%
+        # The setback feature
+        setback:
+          # If set to 'true', the player will be frozen on getting a violation
+          # Notes: It's NOT recommended to use the setback because
+          # 1. It will notify the hackers making the checks easier to bypass
+          # 2. Using a punishment command is simply more efficient
+          setback: true
+          # After X violations, the player's actions should be cancelled
+          setback-vio: 1
+        # Exempts from flight_a check if the conditions are not satisfied
+        detection:
+          # If the server's TPS is lower than X, this check is bypassed
+          min-tps: 5.0
+          # If the player's ping is higher than X, this check is bypassed
+          # The ping can't be higher than 10,000
+          max-ping: 10000
+          # Should the Java players be checked
+          java: true
+          # Should the players who joined via Geyser be checked
+          bedrock: true
+      flight_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      flight_c:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    speed:
+      speed_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      speed_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      speed_c:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      speed_d:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      speed_e:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      speed_f:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    nofall:
+      nofall_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      nofall_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    jump:
+      jump_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      jump_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    liquidwalk:
+      liquidwalk_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      liquidwalk_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    fastclimb:
+      fastclimb_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    noslow:
+      noslow_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    step:
+      step_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    boat:
+      boat_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    vehicle:
+      vehicle_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    elytra:
+      elytra_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      elytra_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      elytra_c:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    trident:
+      trident_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+  # Combat checks
+  combat:
+    killaura:
+      killaura_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      killaura_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      killaura_c:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      killaura_d:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    reach:
+      reach_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      reach_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    criticals:
+      criticals_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      criticals_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    autoclicker:
+      autoclicker_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      autoclicker_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    velocity:
+      velocity_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+  # Interaction checks
+  interaction:
+    airplace:
+      airplace_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    fastplace:
+      fastplace_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    blockplace:
+      blockplace_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      blockplace_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    ghostbreak:
+      ghostbreak_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    fastbreak:
+      fastbreak_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    blockbreak:
+      blockbreak_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      blockbreak_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    scaffold:
+      scaffold_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      scaffold_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+  # Packet checks
+  packet:
+    morepackets:
+      morepackets_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      morepackets_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    timer:
+      timer_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      timer_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    badpackets:
+      badpackets_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      badpackets_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      badpackets_c:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      badpackets_d:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+  # Inventory checks
+  inventory:
+    sorting:
+      sorting_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    itemswap:
+      itemswap_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+  # Player checks
+  player:
+    autobot:
+      autobot_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    skinblinker:
+      skinblinker_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 1
+          commands:
+          - kick %name% %check%
+        setback:
+          setback: true
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
