@@ -1,45 +1,29 @@
 check_update: true
-
-#填写你的Token以激活matrix
-access_token: "填写token"
-
+#填写你的token以激活matrix
+access_token: ''
 permission_refresh_interval: 60
-
-#bc版本的geyser支持开关
 bungee_geysermc_support: false
 
 kick_strike_lightning: true
 
 discord_webhook:
+  # Enable Discord Webhook
   enable: false
-  url: ""
+
+  # Webhook URL
+  url: ''
 
 tps_protection:
   enable: true
-
-  min_tps: 18.0
-
-  lag_threshold: 10000
-
+  min_tps: 17.0
+  lag_threshold: 3000
 log_file: true
 
-#玩家连接补丁
-#如果需要同时使用其他反作弊并且matrix并不兼容那款反作弊的话
-#请设为false禁用此选项，以起到兼容效果
-#但设为false会导致matrix的移动检测失效
-enable_player_connection_patch: true
-
 delete_time: 30
-
+#禁用绕过权限
 disable_bypass_permission: true
-
 relog_time: 5
-#disabled_components似乎已被弃用
 disabled_components:
-  - "example entry"
-
+  - 'example entry'
 custom_vl_weight:
-  - "bp.timer:2"
-  - "move.invmove:1"
-  - "move.vert:5"
-  - "move.hor:1"
+  - 'bp.timer:10'

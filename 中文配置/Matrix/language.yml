@@ -1,72 +1,86 @@
+#### Matrix Config - language.yml ##################################################
+#
+#     Hi, welcome to use Matrix anti-cheat, this is language.yml, which is used
+#  to define the display language of anti-cheat. Here you can define what message
+#  the anti-cheat displays.
+#
+#  - If you encounter any problems, please go to our official Discord
+#  group for help: https://discord.gg/pEvY55J
+#
+#  Anyway, thanks for using Matrix anticheat! ❤
+#
+#####################################################################################
 
-prefix: '&bMatrix &f» '
+# You can define the message prefix here
+prefix: '&7[&eMatrix&7]&r '
 
-kick-format: '玩家 %player% 出现异常行为被强制踢出服务器!'
-#踢出广播开关
+# Define the announcement message after the player is kicked out by anti-cheating
+kick-format: '玩家 %player% 因为作弊被踢出!'
+
+# Define the verbose message format
+verbose-format: '&7%player% 触发 &2%check% &7检测&8| &7%message%(%tooltips%) &8| &7vl:%vl%&b(+%add_vl%) &7延迟:%ping% tps:%tps% component: %component% 版本: %version%'
+
+# Should Matrix broadcast a message when a player is kicked?
 kick-broadcast: true
 
-spam-warning: '你不能如此快的发送聊天信息!'
+# What message should send to the player when Matrix detects
+# that the player is sending chat messages too fast?
+spam-warning: '放慢你的聊天速度!'
 
-verbose-format: '&7%player% 触发 &2%check% &7模块 &8| &7%message% &b(+%add_vl%) &8| &7vl:%vl% 延迟:%ping% 服务器TPS:%tps% lp:%lp% component: %component% 版本: %version%'
+# Defines the message that matrix blocks it when the player tries to quickly
+# reconnect to the server after being kicked out by the anti-cheat
+relog-message: '你需要等待 %time_left% 秒后才能重新加入服务器!'
 
-relog-message: '请等待 %time_left% 秒后重新进入!'
-
+# Global Placeholders, you can define constants here, you can use them in checks.yml
+#
+#  For example, define:
+#     kick_help: "If you think it's a false positive, you can contact the Mod to solve the false kick"
+#  then you can use %gp_kick_help% in checks.yml, It will be automatically replaced with this sentence
+#
 global_placeholder: 
-  warn: "触发了检测模块"
-  k_c: "litebans:kick"
-  k_m: "&c您被踢出服务器!"
-  k_m_2: "%break%"
-  k_m_3: "&7理由: &7&o"
-  k_m_4: "%break%%break%如果有疑问请联系管理员处理！"
-  c_ka: "杀戮光环"
-  c_hb: "碰撞箱增大"
+  d_k: "matrix delay 10 matrix kick "
+  f_k: "matrix kick "
+  warn: "%player% 触发了检测"
+  c_k: "杀戮光环"
+  h_b: "碰撞箱增大"
+  c_s: "点击速度过快"
   m_s: "异常移动"
-  b_p: "异常数据包"
+  b_p: "错误数据包"
   d_a: "异常行为"
-  b_i: "异常方块交互"
+  b_bp: "错误的方块放置/破坏"
   s_f: "自动搭路"
-  w_w: "水上行走"
-  a_kb: "反击退"
-  c_s: "聊天刷屏"
-  h_i: "异常交互"
-  m_p: "移动穿墙"
-  e_f: "鞘翅飞行"
-  v_s: "载具加速"
-  c_pr: '&d'
-  c_hr: '&c谨慎处理'
-  c_ba: '&8|%gp_c_pr%'
-  c_hm: '%gp_c_pr%%version% 版本 %gp_c_ba% %ping% 延迟 %gp_c_ba% %tps% TPS %gp_c_ba% %component% %gp_c_ba% %gp_c_hr% %gp_c_ba%'
-  c_n: '&a'
-  c_w: '&e'
-
+  j_w: "水上行走"
+  k_b: "反击退"
+  i_s: "异常交互"
+  p_s: "穿墙"
 
 commands:
-  verbose: '打开/隐藏 高级信息输出'
-  notify: '发送消息给所有在线OP'
-  toggle-notify: '是否接收在线消息'
-  npc: '生成假人检测玩家是否使用杀戮光环'
-  kick: '踢出玩家'
-  msg: '发送警告信息给玩家'
-  gui: '打开菜单'
-  violations: '打开违规菜单'
+  verbose: '启用/禁用 高级日志信息输出'
+  notify: '发送消息给服务器上的OP'
+  toggle-notify: '是否接收Matrix给op发送的在线消息'
+  npc: '对玩家生成假人以检测杀戮光环'
+  kick: '使用Matrix的踢出功能踢出玩家'
+  msg: '发送警告消息给玩家'
+  gui: '打开控制面板'
+  violations: '打开违规面板'
   ping: '获取玩家的延迟'
   cps: '获取玩家的点击速度'
-  reload: '重新载入矩阵'
+  reload: '重新加载配置文件'
 
 gui:
   main:
     toggle-checks:
-      name: '&a检测开关'
-      description: '&7点击打开检测菜单'
+      name: '&a启用检测'
+      description: '&7点击打开检测页面'
     show-violations:
-      name: '&a查看违规'
-      description: '&7点击查看违规界面'
+      name: '&a显示违规'
+      description: '&7点击打开违规页面'
     toggle-verbose:
-      name: '&a高级信息输出开关'
-      description: '&7点击 启用/禁用 高级信息输出'
+      name: '&a输出高级日志信息'
+      description: '&7点击启用/禁用 高级日志信息的输出'
     reload-matrix:
-      name: '&c重载矩阵反作弊'
-      description: '&7重新加载矩阵反作弊的配置'
+      name: '&c重新加载Matrix'
+      description: '&7重新加载插件'
     server-status:
       name: '&b服务器状态'
     support-links:
@@ -79,13 +93,13 @@ gui:
 misc:
   update:
     start-checking: '正在检测更新....'
-    updater: '§a> 矩阵更新:'
-    has-update: '§c矩阵反作弊有更新: §f%latest%  §c版本: §2%current%'
-    latest: '§a你正在使用最前沿的矩阵反作弊版本 <3'
+    updater: '§a> Matrix有更新:'
+    has-update: '§cMatrix 最新版本: §f%latest%  §c当前版本 version: §2%current%'
+    latest: '§a你正在运行最新的 Matrix-AntiCheat <3'
     download-link: '§c下载链接'
   premium:
     pass: 'Premium version verification has passed!'
     expire-time: 'Expire Time: %time%'
   reload:
-    start-reload: '正在重新加载矩阵...'
-    reloaded: '重新加载矩阵.'
+    start-reload: '重新加载Matrix...'
+    reloaded: 'Matrix重新加载.'
