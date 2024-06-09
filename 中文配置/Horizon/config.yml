@@ -53,7 +53,7 @@ badpackets:
       - 'horizon notify %player% 发送错误的数据包&7(BadPackets)#2'
     20:
       - 'horizon notify %player% is 因发送错误的数据包而被踢出'
-      - 'litebans:kick %player% &7Unknown Error！'
+      - 'kick %player% &7Unknown Error！'
 
 fastuse:
   cancel_vl: 5
@@ -84,7 +84,7 @@ fastuse:
       - 'horizon notify %player% 疑似执行了快速使用&7(FastUse)#2'
     12:
       - 'horizon notify %player% 因执行快速使用被踢出'
-      - 'litebans:kick %player% &7Anomalous action delay！'
+      - 'kick %player% &7Anomalous action delay！'
 
 fly:
   cancel_vl: 10
@@ -117,7 +117,7 @@ fly:
       - 'horizon notify %player% 使用飞行&7(Fly)#2'
     160:
       - 'horizon notify %player% 因为飞行而被踢出&7(Fly)'
-      - 'litebans:kick %player% Wrong move '
+      - 'kick %player% Wrong move '
 
 fastbreak:
   cancel_vl: 2
@@ -134,7 +134,7 @@ fastbreak:
       - 'horizon notify %player% 使用了快速破坏&7(FastBreak)#2'
     18:
       - 'horizon notify %player% 使用快速破坏而被踢出&7(FastBreak)'
-      - 'litebans:kick %player% Breaking block too fast'
+      - 'kick %player% Breaking block too fast'
 
 speed:
   cancel_vl: 10
@@ -178,7 +178,7 @@ speed:
       - 'horizon notify %player% 使用了加速&7(Speed)#2'
     150:
       - 'horizon notify %player% 因为使用了加速而被踢出&7(Speed)'
-      - 'litebans:kick %player% Bhop？'
+      - 'kick %player% Bhop？'
 
 timer:
   cancel_vl: 8
@@ -201,7 +201,7 @@ timer:
       - 'horizon notify %player% 正在使用变速齿轮&7(Timer)#1'
     80:
       - 'horizon notify %player% 因为使用变速齿轮而被踢出&7(Timer)'
-      - 'litebans:kick %player% Out of sync timer'
+      - 'kick %player% Out of sync timer'
 
 cheststealer:
   cancel_vl: 3
@@ -218,7 +218,7 @@ cheststealer:
       - 'horizon notify %player% 从箱子拿取物品的速度过快&7(ChestStealer)#2'
     20:
       - 'horizon notify %player% 因为使用箱子窃取而被踢出&7(ChestStealer)'
-      - 'litebans:kick %player% Chest Action'
+      - 'kick %player% Chest Action'
 
 velocity:
   cancel_vl: 1
@@ -235,7 +235,7 @@ velocity:
       - 'horizon notify %player% 避开了击退&7(Velocity)#2'
     25:
       - 'horizon notify %player% 使用了反击退而被踢出&7(Velocity)'
-      - 'litebans:kick %player%  AntiKnockBack？'
+      - 'kick %player%  AntiKnockBack？'
 
 killaura:
   cancel_vl: 8
@@ -277,7 +277,7 @@ killaura:
       - 'horizon notify %player% 使用了杀戮光环&7(Killaura)#2'
     16:
       - 'horizon notify %player% 因为使用了杀戮光环被踢'
-      - 'litebans:kick %player% Wrong way to attack '
+      - 'kick %player% Wrong way to attack '
 
 liquidwalk:
   cancel_vl: 5
@@ -298,7 +298,7 @@ liquidwalk:
       - 'horizon notify %player% 使用了水上行走&7(LiquidWalk)#2'
     36:
       - 'horizon notify %player% 因为使用水上行走而被踢出&7(LiquidWalk)'
-      - 'litebans:kick %player% Jesus？'
+      - 'kick %player% Jesus？'
 
 nofall:
   cancel_vl: 1
@@ -315,7 +315,7 @@ nofall:
       - 'horizon notify %player% 规避了掉落伤害&7(Nofall)#2'
     16:
       - 'horizon notify %player% 因为使用无跌落伤害而被踢出&7(Nofall)'
-      - 'litebans:kick %player% AntiFallDamage？'
+      - 'kick %player% AntiFallDamage？'
 
 phase:
   cancel_vl: 1
@@ -332,7 +332,7 @@ phase:
       - 'horizon notify %player% 使用了穿墙&7(Phase)#2'
     30:
       - 'horizon notify %player% 因为使用穿墙被踢出&7(Phase)'
-      - 'litebans:kick %player% Wrong interaction '
+      - 'kick %player% Wrong interaction '
 
 scaffold:
   cancel_vl: 6
@@ -349,7 +349,7 @@ scaffold:
       - 'horizon notify %player% 使用了自动搭路&7(Scaffold)#2'
     15:
       - 'horizon notify %player% 因使用自动搭路而被踢出&7(Scaffold)'
-      - 'litebans:kick %player% BlockFly'
+      - 'kick %player% BlockFly'
 
 freecam:
   # Unused

@@ -507,7 +507,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(A)
+          - kick %player% &cAAC &f-> &4Aim(A)
         buffer:
           max: 3
           multiple: 0.75
@@ -531,7 +531,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(B)
+          - kick %player% &cAAC &f-> &4Aim(B)
         buffer:
           max: 6
           multiple: 0.5
@@ -555,7 +555,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(C)
+          - kick %player% &cAAC &f-> &4Aim(C)
         buffer:
           max: 5
           multiple: 0.5
@@ -579,7 +579,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(D)
+          - kick %player% &cAAC &f-> &4Aim(D)
         buffer:
           max: 8
           multiple: 0.5
@@ -603,7 +603,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(E)
+          - kick %player% &cAAC &f-> &4Aim(E)
         buffer:
           max: 4
           multiple: 0.75
@@ -627,7 +627,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(F)
+          - kick %player% &cAAC &f-> &4Aim(F)
         buffer:
           max: 12
           multiple: 0.5
@@ -651,7 +651,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(G)
+          - kick %player% &cAAC &f-> &4Aim(G)
         buffer:
           max: 4
           multiple: 0.5
@@ -675,7 +675,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(H)
+          - kick %player% &cAAC &f-> &4Aim(H)
         buffer:
           max: 7
           multiple: 0.5
@@ -699,7 +699,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(I)
+          - kick %player% &cAAC &f-> &4Aim(I)
         buffer:
           max: 7
           multiple: 0.5
@@ -723,7 +723,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(K)
+          - kick %player% &cAAC &f-> &4Aim(K)
         buffer:
           max: 6
           multiple: 0.5
@@ -747,7 +747,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(L)
+          - kick %player% &cAAC &f-> &4Aim(L)
         buffer:
           max: 10
           multiple: 0.45
@@ -770,7 +770,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(M)
+          - kick %player% &cAAC &f-> &4Aim(M)
         buffer:
           max: 2
           multiple: 0.4
@@ -794,7 +794,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(N)
+          - kick %player% &cAAC &f-> &4Aim(N)
         buffer:
           max: 5
           multiple: 0.5
@@ -818,7 +818,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(O)
+          - kick %player% &cAAC &f-> &4Aim(O)
         buffer:
           max: 5
           multiple: 0.5
@@ -842,7 +842,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(P)
+          - kick %player% &cAAC &f-> &4Aim(P)
         buffer:
           max: 2
           multiple: 0.4
@@ -866,7 +866,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(Q)
+          - kick %player% &cAAC &f-> &4Aim(Q)
         buffer:
           max: 6
           multiple: 0.5
@@ -890,7 +890,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(R)
+          - kick %player% &cAAC &f-> &4Aim(R)
         buffer:
           max: 20
           multiple: 0.3
@@ -914,7 +914,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(S)
+          - kick %player% &cAAC &f-> &4Aim(S)
         buffer:
           max: 20
           multiple: 0.25
@@ -938,7 +938,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(U)
+          - kick %player% &cAAC &f-> &4Aim(U)
         hotbar-shuffle:
           enabled: false
           minimum-vl-to-shuffle: 2
@@ -958,7 +958,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(W)
+          - kick %player% &cAAC &f-> &4Aim(W)
         buffer:
           max: 20
           multiple: 0.25
@@ -982,7 +982,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(X)
+          - kick %player% &cAAC &f-> &4Aim(X)
         buffer:
           max: 12
           multiple: 0.25
@@ -1006,7 +1006,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Aim(Y)
+          - kick %player% &cAAC &f-> &4Aim(Y)
         hotbar-shuffle:
           enabled: false
           minimum-vl-to-shuffle: 2
@@ -1027,7 +1027,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoBlock(A)
+          - kick %player% &cAAC &f-> &4AutoBlock(A)
         hotbar-shuffle:
           enabled: false
           minimum-vl-to-shuffle: 2
@@ -1047,7 +1047,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoBlock(B)
+          - kick %player% &cAAC &f-> &4AutoBlock(B)
         hotbar-shuffle:
           enabled: false
           minimum-vl-to-shuffle: 2
@@ -1067,7 +1067,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoBlock(C)
+          - kick %player% &cAAC &f-> &4AutoBlock(C)
         buffer:
           max: 2
           multiple: 0.5
@@ -1091,7 +1091,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoBlock(D)
+          - kick %player% &cAAC &f-> &4AutoBlock(D)
         hotbar-shuffle:
           enabled: false
           minimum-vl-to-shuffle: 2
@@ -1114,7 +1114,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(A)
+          - kick %player% &cAAC &f-> &4AutoClicker(A)
         max-cps: 25
       b:
         enabled: true
@@ -1127,7 +1127,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(B)
+          - kick %player% &cAAC &f-> &4AutoClicker(B)
         buffer:
           max: 3
           multiple: 0.5
@@ -1143,7 +1143,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(C)
+          - kick %player% &cAAC &f-> &4AutoClicker(C)
         buffer:
           max: 3
           multiple: 0.5
@@ -1159,7 +1159,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(D)
+          - kick %player% &cAAC &f-> &4AutoClicker(D)
         buffer:
           max: 3
           multiple: 0.5
@@ -1175,7 +1175,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(E)
+          - kick %player% &cAAC &f-> &4AutoClicker(E)
         buffer:
           max: 3
           multiple: 0.5
@@ -1191,7 +1191,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(F)
+          - kick %player% &cAAC &f-> &4AutoClicker(F)
         buffer:
           max: 4
           multiple: 0.5
@@ -1207,7 +1207,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(G)
+          - kick %player% &cAAC &f-> &4AutoClicker(G)
         buffer:
           max: 5
           multiple: 0.25
@@ -1223,7 +1223,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(H)
+          - kick %player% &cAAC &f-> &4AutoClicker(H)
         buffer:
           max: 4
           multiple: 0.5
@@ -1239,7 +1239,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(I)
+          - kick %player% &cAAC &f-> &4AutoClicker(I)
         buffer:
           max: 5
           multiple: 0.5
@@ -1255,7 +1255,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(J)
+          - kick %player% &cAAC &f-> &4AutoClicker(J)
         buffer:
           max: 4
           multiple: 0.5
@@ -1271,7 +1271,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(K)
+          - kick %player% &cAAC &f-> &4AutoClicker(K)
         buffer:
           max: 4
           multiple: 0.5
@@ -1287,7 +1287,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(L)
+          - kick %player% &cAAC &f-> &4AutoClicker(L)
         buffer:
           max: 4
           multiple: 0.25
@@ -1303,7 +1303,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(M)
+          - kick %player% &cAAC &f-> &4AutoClicker(M)
         buffer:
           max: 4
           multiple: 0.25
@@ -1319,7 +1319,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(N)
+          - kick %player% &cAAC &f-> &4AutoClicker(N)
         buffer:
           max: 25
           multiple: 0.15
@@ -1335,7 +1335,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(O)
+          - kick %player% &cAAC &f-> &4AutoClicker(O)
         buffer:
           max: 5
           multiple: 0.25
@@ -1351,7 +1351,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(P)
+          - kick %player% &cAAC &f-> &4AutoClicker(P)
         buffer:
           max: 2
           multiple: 0.25
@@ -1366,7 +1366,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(Q)
+          - kick %player% &cAAC &f-> &4AutoClicker(Q)
         buffer:
           max: 35
           multiple: 0.3
@@ -1382,7 +1382,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(R)
+          - kick %player% &cAAC &f-> &4AutoClicker(R)
         buffer:
           max: 50
           multiple: 0.15
@@ -1398,7 +1398,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(S)
+          - kick %player% &cAAC &f-> &4AutoClicker(S)
         buffer:
           max: 30
           multiple: 0.15
@@ -1414,7 +1414,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4AutoClicker(T)
+          - kick %player% &cAAC &f-> &4AutoClicker(T)
         buffer:
           max: 25
           multiple: 0.15
@@ -1432,7 +1432,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Reach(A)
+          - kick %player% &cAAC &f-> &4Reach(A)
         buffer:
           max: 3
           multiple: 0.25
@@ -1449,7 +1449,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Reach(B)
+          - kick %player% &cAAC &f-> &4Reach(B)
         buffer:
           max: 6
           multiple: 0.25
@@ -1467,7 +1467,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4FastBow(A)
+          - kick %player% &cAAC &f-> &4FastBow(A)
         buffer:
           max: 3
           multiple: 0.5
@@ -1492,7 +1492,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Criticals(A)
+          - kick %player% &cAAC &f-> &4Criticals(A)
         buffer:
           max: 1
           multiple: 0.5
@@ -1516,7 +1516,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Criticals(B)
+          - kick %player% &cAAC &f-> &4Criticals(B)
         buffer:
           max: 1
           multiple: 0.5
@@ -1541,7 +1541,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4KillAura(A)
+          - kick %player% &cAAC &f-> &4KillAura(A)
         buffer:
           max: 3
           multiple: 0.5
@@ -1565,7 +1565,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4KillAura(B)
+          - kick %player% &cAAC &f-> &4KillAura(B)
         buffer:
           max: 5
           multiple: 0.6
@@ -1589,7 +1589,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4KillAura(C)
+          - kick %player% &cAAC &f-> &4KillAura(C)
         buffer:
           max: 2
           multiple: 0.5
@@ -1613,7 +1613,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4KillAura(D)
+          - kick %player% &cAAC &f-> &4KillAura(D)
       f:
         enabled: true
         punishable: true
@@ -1625,7 +1625,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4KillAura(F)
+          - kick %player% &cAAC &f-> &4KillAura(F)
         buffer:
           max: 10
           multiple: 0.25
@@ -1641,7 +1641,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4KillAura(G)
+          - kick %player% &cAAC &f-> &4KillAura(G)
         buffer:
           max: 3
           multiple: 0.5
@@ -1657,7 +1657,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4KillAura(H)
+          - kick %player% &cAAC &f-> &4KillAura(H)
       j:
         enabled: true
         punishable: true
@@ -1669,7 +1669,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4KillAura(J)
+          - kick %player% &cAAC &f-> &4KillAura(J)
         buffer:
           max: 1
           multiple: 0.5
@@ -1685,7 +1685,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4KillAura(J)
+          - kick %player% &cAAC &f-> &4KillAura(J)
         buffer:
           max: 3
           multiple: 0.5
@@ -1701,7 +1701,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4KillAura(L)
+          - kick %player% &cAAC &f-> &4KillAura(L)
         buffer:
           max: 5
           multiple: 0.6
@@ -1726,7 +1726,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Hitbox(A)
+          - kick %player% &cAAC &f-> &4Hitbox(A)
         buffer:
           max: 4
           multiple: 0.25
@@ -1743,7 +1743,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Hitbox(B)
+          - kick %player% &cAAC &f-> &4Hitbox(B)
         buffer:
           max: 6
           multiple: 0.25
@@ -1761,7 +1761,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Velocity(A)
+          - kick %player% &cAAC &f-> &4Velocity(A)
         buffer:
           max: 4
           multiple: 0.25
@@ -1777,7 +1777,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Velocity(B)
+          - kick %player% &cAAC &f-> &4Velocity(B)
         buffer:
           max: 4
           multiple: 0.35
@@ -1793,7 +1793,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Velocity(C)
+          - kick %player% &cAAC &f-> &4Velocity(C)
         buffer:
           max: 5
           multiple: 0.25
@@ -1809,7 +1809,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Velocity(D)
+          - kick %player% &cAAC &f-> &4Velocity(D)
         buffer:
           max: 4
           multiple: 0.25
@@ -1827,7 +1827,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4NoSlow(A)
+          - kick %player% &cAAC &f-> &4NoSlow(A)
         buffer:
           max: 3
           multiple: 0.25
@@ -1843,7 +1843,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4NoSlow(B)
+          - kick %player% &cAAC &f-> &4NoSlow(B)
         buffer:
           max: 7
           multiple: 0.25
@@ -1859,7 +1859,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4NoSlow(C)
+          - kick %player% &cAAC &f-> &4NoSlow(C)
         buffer:
           max: 7
           multiple: 0.25
@@ -1875,7 +1875,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4NoSlow(D)
+          - kick %player% &cAAC &f-> &4NoSlow(D)
         buffer:
           max: 7
           multiple: 0.25
@@ -1891,7 +1891,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4NoSlow(E)
+          - kick %player% &cAAC &f-> &4NoSlow(E)
         buffer:
           max: 7
           multiple: 0.25
@@ -1910,7 +1910,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Motion(A)
+          - kick %player% &cAAC &f-> &4Motion(A)
         buffer:
           max: 3
           multiple: 0.25
@@ -1928,7 +1928,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Motion(B)
+          - kick %player% &cAAC &f-> &4Motion(B)
         buffer:
           max: 3
           multiple: 0.25
@@ -1946,7 +1946,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Motion(C)
+          - kick %player% &cAAC &f-> &4Motion(C)
         buffer:
           max: 1
           multiple: 0.5
@@ -1964,7 +1964,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Motion(D)
+          - kick %player% &cAAC &f-> &4Motion(D)
         buffer:
           max: 3
           multiple: 0.25
@@ -1982,7 +1982,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Motion(E)
+          - kick %player% &cAAC &f-> &4Motion(E)
         buffer:
           max: 1
           multiple: 0.5
@@ -2000,7 +2000,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Motion(G)
+          - kick %player% &cAAC &f-> &4Motion(G)
         buffer:
           max: 2
           multiple: 0.25
@@ -2018,7 +2018,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Motion(H)
+          - kick %player% &cAAC &f-> &4Motion(H)
         buffer:
           max: 4
           multiple: 0.25
@@ -2037,7 +2037,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Jump(A)
+          - kick %player% &cAAC &f-> &4Jump(A)
         buffer:
           max: 2
           multiple: 0.25
@@ -2055,7 +2055,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Jump(B)
+          - kick %player% &cAAC &f-> &4Jump(B)
         buffer:
           max: 2
           multiple: 0.25
@@ -2073,7 +2073,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Step(A)
+          - kick %player% &cAAC &f-> &4Step(A)
       b:
         enabled: true
         punishable: true
@@ -2086,7 +2086,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Step(B)
+          - kick %player% &cAAC &f-> &4Step(B)
         buffer:
           max: 6
           multiple: 0.25
@@ -2103,7 +2103,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Step(C)
+          - kick %player% &cAAC &f-> &4Step(C)
         buffer:
           max: 4
           multiple: 0.25
@@ -2120,7 +2120,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4BoatFly(A)
+          - kick %player% &cAAC &f-> &4BoatFly(A)
         buffer:
           max: 4
           multiple: 0.33
@@ -2137,7 +2137,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4BoatFly(B)
+          - kick %player% &cAAC &f-> &4BoatFly(B)
         buffer:
           max: 5
           multiple: 0.25
@@ -2154,7 +2154,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4BoatFly(C)
+          - kick %player% &cAAC &f-> &4BoatFly(C)
         buffer:
           max: 5
           multiple: 0.25
@@ -2172,7 +2172,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4EntityFlight(A)
+          - kick %player% &cAAC &f-> &4EntityFlight(A)
         buffer:
           max: 5
           multiple: 0.5
@@ -2189,7 +2189,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player%  &cAAC &f-> &4EntityFlight(B)
+          - kick %player%  &cAAC &f-> &4EntityFlight(B)
         buffer:
           max: 5
           multiple: 0.5
@@ -2206,7 +2206,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player%  &cAAC &f-> &4Antilevitation(A)
+          - kick %player%  &cAAC &f-> &4Antilevitation(A)
         buffer:
           max: 8
           multiple: 0.25
@@ -2223,7 +2223,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &cAAC &f-> &4Nosaddle(A)
+          - kick %player% &cAAC &f-> &4Nosaddle(A)
         buffer:
           max: 6
           multiple: 0.5
@@ -2240,7 +2240,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 5
           multiple: 0.5
@@ -2259,7 +2259,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 1
           multiple: 0.5
@@ -2277,7 +2277,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 8
           multiple: 0.25
@@ -2294,7 +2294,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 6
           multiple: 0.5
@@ -2311,7 +2311,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 6
           multiple: 0.25
@@ -2328,7 +2328,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.25
@@ -2345,7 +2345,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.25
@@ -2362,7 +2362,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.25
@@ -2379,7 +2379,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.25
@@ -2396,7 +2396,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.25
@@ -2415,7 +2415,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 5
           multiple: 0.35
@@ -2433,7 +2433,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.25
@@ -2452,7 +2452,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.25
@@ -2471,7 +2471,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.25
@@ -2491,7 +2491,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.5
@@ -2510,7 +2510,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.35
@@ -2529,7 +2529,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.5
@@ -2547,7 +2547,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.5
@@ -2565,7 +2565,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 10
           multiple: 0.45
@@ -2583,7 +2583,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.45
@@ -2601,7 +2601,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 10
           multiple: 0.25
@@ -2620,7 +2620,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.65
@@ -2642,7 +2642,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.5
@@ -2660,7 +2660,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.75
@@ -2682,7 +2682,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.35
@@ -2704,7 +2704,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.4
@@ -2726,7 +2726,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
     sprint:
       a:
         enabled: true
@@ -2739,7 +2739,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 6
           multiple: 0.25
@@ -2758,7 +2758,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 2
           multiple: 0.5
@@ -2774,7 +2774,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.15
@@ -2792,7 +2792,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
     fastplace:
       a:
         enabled: true
@@ -2805,7 +2805,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         max-blocks: 15
       b:
         enabled: true
@@ -2818,7 +2818,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 1
           multiple: 0.25
@@ -2836,7 +2836,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 2
           multiple: 0.25
@@ -2854,7 +2854,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.5
@@ -2871,7 +2871,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       b:
         enabled: true
         punishable: true
@@ -2883,7 +2883,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.25
@@ -2899,7 +2899,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 2
           multiple: 0.25
@@ -2915,7 +2915,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.25
@@ -2931,7 +2931,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.25
@@ -2947,7 +2947,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.5
@@ -2963,7 +2963,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 2
           multiple: 0.25
@@ -2979,7 +2979,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 8
           multiple: 0.25
@@ -2995,7 +2995,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       j:
         enabled: true
         punishable: true
@@ -3007,7 +3007,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       k:
         enabled: true
         punishable: true
@@ -3019,7 +3019,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 1
           multiple: 0.5
@@ -3036,7 +3036,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 1
           multiple: 0.5
@@ -3052,7 +3052,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.5
@@ -3068,7 +3068,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% &c[Vulcan] Unfair Advantage
+          - kick %player% &c[Vulcan] Unfair Advantage
     timer:
       a:
         enabled: true
@@ -3081,7 +3081,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.8
         punishment-commands:
-          - "minecraft:litebans:kick %player% Internal Exception: io.netty.handler.timeout.ReadTimeoutException"
+          - "minecraft:kick %player% Internal Exception: io.netty.handler.timeout.ReadTimeoutException"
         buffer:
           max: 35
           multiple: 0.425
@@ -3098,7 +3098,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.8
         punishment-commands:
-          - "minecraft:litebans:kick %player% Internal Exception: io.netty.handler.timeout.ReadTimeoutException"
+          - "minecraft:kick %player% Internal Exception: io.netty.handler.timeout.ReadTimeoutException"
         buffer:
           max: 3
           multiple: 0.5
@@ -3116,7 +3116,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 20
           multiple: 0.5
@@ -3132,7 +3132,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 2
           multiple: 0.5
@@ -3149,7 +3149,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         cancel: true
     airplace:
       a:
@@ -3163,7 +3163,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
     badpackets:
       a:
         enabled: true
@@ -3176,7 +3176,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 2
           multiple: 0.5
@@ -3192,7 +3192,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       c:
         enabled: true
         punishable: true
@@ -3204,7 +3204,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       d:
         enabled: true
         punishable: true
@@ -3216,7 +3216,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.25
@@ -3232,7 +3232,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       f:
         enabled: true
         punishable: true
@@ -3244,7 +3244,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       g:
         enabled: true
         punishable: true
@@ -3256,7 +3256,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       h:
         enabled: true
         punishable: true
@@ -3268,7 +3268,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       i:
         enabled: true
         punishable: true
@@ -3280,7 +3280,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       j:
         enabled: true
         punishable: true
@@ -3292,7 +3292,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       k:
         enabled: true
         punishable: true
@@ -3304,7 +3304,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.5
@@ -3320,7 +3320,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 5
           multiple: 0.33
@@ -3336,7 +3336,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 20
           multiple: 0.25
@@ -3352,7 +3352,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.5
@@ -3368,7 +3368,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.5
@@ -3384,7 +3384,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.5
@@ -3400,7 +3400,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 6
           multiple: 0.5
@@ -3416,7 +3416,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       t:
         enabled: true
         punishable: true
@@ -3428,7 +3428,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       u:
         enabled: true
         punishable: true
@@ -3440,7 +3440,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       v:
         enabled: true
         punishable: true
@@ -3452,7 +3452,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 8
           multiple: 0.5
@@ -3469,7 +3469,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 8
           multiple: 0.5
@@ -3485,7 +3485,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 6
           multiple: 0.5
@@ -3501,7 +3501,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       z:
         enabled: true
         punishable: true
@@ -3513,7 +3513,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
       "1":
         enabled: true
         punishable: true
@@ -3525,7 +3525,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 12
           multiple: 0.25
@@ -3541,7 +3541,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 12
           multiple: 0.25
@@ -3557,7 +3557,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.25
@@ -3573,7 +3573,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
     inventory:
       a:
         enabled: true
@@ -3586,7 +3586,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 2
           multiple: 0.25
@@ -3602,7 +3602,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 2
           multiple: 0.25
@@ -3621,7 +3621,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 2
           multiple: 0.25
@@ -3639,7 +3639,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.25
@@ -3655,7 +3655,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 8
           multiple: 0.25
@@ -3673,7 +3673,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 1
           multiple: 0.5
@@ -3691,7 +3691,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 1
           multiple: 0.5
@@ -3709,7 +3709,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 2
           multiple: 0.5
@@ -3727,7 +3727,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.5
@@ -3745,7 +3745,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 3
           multiple: 0.5
@@ -3763,7 +3763,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 1
           multiple: 0.5
@@ -3780,7 +3780,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.5
@@ -3796,7 +3796,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.5
@@ -3812,7 +3812,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         buffer:
           max: 4
           multiple: 0.5
@@ -3829,7 +3829,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         max-combat-violations: 25
       b:
         enabled: true
@@ -3842,7 +3842,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         max-movement-violations: 30
       c:
         enabled: true
@@ -3855,7 +3855,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         max-player-violations: 30
       d:
         enabled: true
@@ -3868,7 +3868,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         max-autoclicker-violations: 30
       e:
         enabled: true
@@ -3881,7 +3881,7 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         max-total-violations: 50
       f:
         enabled: true
@@ -3894,5 +3894,5 @@ checks:
         maximum-ping: 100000
         minimum-tps: 19.0
         punishment-commands:
-          - litebans:kick %player% 不合法的优势
+          - kick %player% 不合法的优势
         max-scaffold-violations: 25

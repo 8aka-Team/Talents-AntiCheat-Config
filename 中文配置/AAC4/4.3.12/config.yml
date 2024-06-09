@@ -85,7 +85,7 @@
 #  thresholds:
 #     10:
 #      - "broadcast %aac_player% was kicked for cheating"
-#      - "Litebans:kick %aac_player% cheating"
+#      - "kick %aac_player% cheating"
 #
 # The configuration file follows:
 
@@ -111,7 +111,7 @@ criticals:
   thresholds:
     20:
       - "aac notify %aac_player% 因为使用刀刀暴击而被踢 (%aac_ping%ms, %aac_tps%TPS)"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # FastBow stops players from shooting arrows too quickly
 fastbow:
@@ -136,7 +136,7 @@ fastbow:
     3: "aac notify %aac_player% 异常的射箭速度 (%aac_ping%ms, %aac_tps%TPS)"
     10:
       - "aac notify %aac_player% 使用快速射健而被踢出 (%aac_ping%ms, %aac_tps%TPS)"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # FastUse stops players from consuming items too quickly
 fastuse:
@@ -161,7 +161,7 @@ fastuse:
     30:
       - "aac notify %aac_player% 因使用物品过快而被踢出 (%aac_ping%ms, %aac_tps%TPS)"
       - "aac banvl 2 %aac_player% 因为快速使用被踢"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # FightSpeed stops players from attacking too quickly
 fightspeed:
@@ -186,7 +186,7 @@ fightspeed:
     60: "aac notify %aac_player% 攻击速度太快 (%aac_ping%ms, %aac_tps%TPS)"
     95:
       - "aac notify %aac_player% 因攻击过快而被踢 (%aac_ping%ms, %aac_tps%TPS)"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # Hitbox forces players to look at entities that they want to attack
 hitbox:
@@ -222,7 +222,7 @@ hitbox:
   thresholds:
     14:
       - "aac notify %aac_player% 因使用碰撞箱增大而被踢出 (%aac_ping%ms, %aac_tps%TPS)"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # Killaura detects modifications that create an unfair advantage in combat
 killaura:
@@ -269,7 +269,7 @@ killaura:
     20: "aac notify %aac_player% 表现出可疑的战斗模式 (%aac_ping%ms, %aac_tps%TPS)"
     230:
       - "aac notify %aac_player% 因可疑的战斗方式而被踢 (%aac_ping%ms, %aac_tps%TPS)"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # Regen stops players from regenerating health too quickly
 regen:
@@ -313,7 +313,7 @@ derp:
   thresholds:
     10:
       - "aac notify %aac_player% 因非正常的头部旋转而被踢 (%aac_ping%ms, %aac_tps%TPS)"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # Move controls player movement
 move:
@@ -419,7 +419,7 @@ move:
   thresholds:
     14900:
       - "aac notify %aac_player% 因无效移动而被踢 (%aac_ping%ms, %aac_tps%TPS)"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # NoFall stops players from avoiding fall damage
 nofall:
@@ -440,7 +440,7 @@ nofall:
   thresholds:
     50:
       - "aac notify %aac_player% 因避免了跌落伤害而被踢 (%aac_ping%ms, %aac_tps%TPS)"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # Phase stops players from moving through solid walls
 phase:
@@ -538,7 +538,7 @@ badpackets:
     110:
       - "aac notify %aac_player% 因发送错误数据包而被踢出 (%aac_ping%ms, %aac_tps%TPS)"
       - "aac banvl 5 %aac_player% 被踢了，因为发送坏数据包"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # FastBreak stops players from breaking blocks too quickly
 fastbreak:
@@ -567,7 +567,7 @@ fastbreak:
     20:
       - "aac notify %aac_player% 因为打破方块的速度过快而被踢 (%aac_ping%ms, %aac_tps%TPS)"
       - "aac banvl 1 %aac_player% 因快速破坏被踢"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # FastPlace stops players from placing blocks too quickly
 fastplace:
@@ -593,7 +593,7 @@ fastplace:
     100:
       - "aac notify %aac_player% 因为放置方快太快而被踢 (%aac_ping%ms, %aac_tps%TPS)"
       - "aac banvl 0 %aac_player% 因快速放置被踢"
-      - "Litebans:kick %aac_player% 非法客户端修改"
+      - "kick %aac_player% 非法客户端修改"
 
 # Interact detects a number of impossible actions that a hacked client could perform.
 interact:
