@@ -32,11 +32,8 @@
 > ---
 > 另外的话
 > 
-> 您需要使用最新版Protocollib和Litebans来使用本配置
+> 您需要使用最新的Dev版Protocollib来使用本配置
 >
-> 如果您不需要或者没有Litebans插件
->
-> 请自行替换掉配置里的Litebans:kick指令
 
 ---
 
