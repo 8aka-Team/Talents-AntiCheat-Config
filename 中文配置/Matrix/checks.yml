@@ -254,7 +254,7 @@ chat:
 #异常点击检测
 interact:
   enable: true
-  mode: "v2"
+  mode: "v1"
   strict: false
   check_interact_block: true
   check_attack: true
