@@ -86,7 +86,7 @@ hitbox:
   max_reach: 3.15
   trace_back_length: 8
   strict_mode: true
-  cancel_way: slient
+  cancel_way: Slient
   cancel_vl: 5
   vl_weights:
     miss_player_hitbox: 2
