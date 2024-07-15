@@ -85,8 +85,8 @@ hitbox:
   enable: true
   max_reach: 3.15
   trace_back_length: 8
-  strict_mode: false
-  cancel_way: cancel
+  strict_mode: true
+  cancel_way: slient
   cancel_vl: 5
   vl_weights:
     miss_player_hitbox: 2
@@ -95,8 +95,8 @@ hitbox:
   dynamic_vl:
     enable: true
     expander: 10
-    min_vl: 3
-    max_vl: 8
+    min_vl: 5
+    max_vl: 10
   max_burst_vl: 15
   decay:
     interval: 15
@@ -126,7 +126,7 @@ move:
   enable: true
   check_noslow: true
   check_nofall: true
-  cancel_vl: 35
+  cancel_vl: 40
   apply_damage: true
   allow_bpe_bridge: false
   check_flying_players: false
@@ -136,7 +136,7 @@ move:
     interval: 10
     amount: 45
   commands:
-    180: '%gp_f_k% %gp_m_s%'
+    220: '%gp_f_k% %gp_m_s%'
 #错误数据包检测
 badpackets:
   enable: true
@@ -144,6 +144,7 @@ badpackets:
   decay:
     interval: 15
     amount: 25
+  cancel_vl: 3
   commands:
     120: '%gp_f_k% %gp_b_p%'
 #行为延迟检测
