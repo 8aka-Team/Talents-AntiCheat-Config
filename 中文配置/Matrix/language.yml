@@ -38,8 +38,8 @@ relog-message: '你需要等待 %time_left% 秒后才能重新加入服务器!'
 #  then you can use %gp_kick_help% in checks.yml, It will be automatically replaced with this sentence
 #
 global_placeholder: 
-  d_k: "matrix delay 10 matrix kick"
-  f_k: "matrix kick"
+  d_k: "matrix delay 10 matrix kick %player%"
+  f_k: "matrix kick %player%"
   warn: "%player% 触发了检测"
   c_k: "杀戮光环"
   h_b: "碰撞箱增大"
