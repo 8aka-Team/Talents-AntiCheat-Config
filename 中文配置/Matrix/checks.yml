@@ -146,7 +146,7 @@ badpackets:
     amount: 25
   cancel_vl: 3
   commands:
-    120: '%gp_f_k% %gp_b_p%'
+    240: '%gp_f_k% %gp_b_p%'
 #行为延迟检测
 delay:
   enable: true
@@ -288,14 +288,14 @@ autobot:
 #鞘翅检测
 elytra:
   enable: true
-  force_setback: true
-  setback_vl: 5
-  unequip_vl: 20
+  force_setback: false
+  setback_vl: 40
+  unequip_vl: 50
   decay:
     interval: 15
     amount: 7
   commands:
-    40: 'matrix kick %player% Elytra Flight'
+    70: 'matrix kick %player% Elytra Flight'
 #载具检测
 vehicle:
   enable: true
