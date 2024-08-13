@@ -26,4 +26,4 @@ relog_time: 5
 disabled_components:
   - 'example entry'
 custom_vl_weight:
-  - 'bp.timer:10'
+  - 'bp.timer:5'
