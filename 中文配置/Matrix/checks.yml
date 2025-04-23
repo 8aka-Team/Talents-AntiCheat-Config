@@ -87,6 +87,7 @@ hitbox:
   trace_back_length: 8
   strict_mode: true
   cancel_way: Slient
+  raycast: true
   cancel_vl: 5
   vl_weights:
     miss_player_hitbox: 2
@@ -110,7 +111,7 @@ hitbox:
 #连点检测
 click:
   enable: true
-  max_cps: 15
+  max_cps: 18
   check_cps: true
   check_swing: true
   check_timing: true
@@ -268,7 +269,7 @@ interact:
 #穿墙检测
 phase:
   enable: true
-  freeze_time: 250
+  freeze_time: 450
   cancel_vl: 5
   exclude_types: []
   decay:
