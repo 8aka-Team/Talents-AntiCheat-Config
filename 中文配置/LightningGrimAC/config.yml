@@ -17,14 +17,16 @@ alerts:
 
 verbose:
   print-to-console: false
+check-for-updates: true
 
 client-brand:
   # 这意味着如果客户端型号匹配以下正则表达式，它将不会将其客户端版本显示在聊天栏中
   ignored-clients:
     - "^vanilla$"
     - "^fabric$"
-    - "^lunarclient:[a-z0-9]{7}"
+    - "^lunarclient:v\\d+\\.\\d+\\.\\d+-\\d{4}$"
     - "^Feather Fabric$"
+    - "^labymod$"
 
 spectators:
   # 把所有拥有 grim.spectartor 权限的人都隐藏起来，不管他是否观察玩家。
@@ -35,7 +37,8 @@ spectators:
 
 # 在我们让他们超时之前，玩家应该有多长时间？ 此处的60 指60s
 max-transaction-time: 60
-
+cancel-duplicate-packet: true
+ignore-duplicate-packet-rotation: false
 Simulation:
   # 当玩家合法时，我们应该将总优势乘以多少
   # 这是默认配置的样子（x 轴 = seconds ，y 轴 = 1/1000 方块）: https://www.desmos.com/calculator/d4ufgxrxer
@@ -55,6 +58,7 @@ Simulation:
   # 这是为了防止玩家收集过多的违规行为，并且永远无法清除所有的违规行为
   # 这是默认配置的样子（x 轴 = seconds ，y 轴 = 1/1000 方块）: https://www.desmos.com/calculator/4lovswdarj
   max-ceiling: 4
+  setback-violation-threshold: 1
 
 # 检查玩家是否穿墙
 Phase:
@@ -76,10 +80,56 @@ PositionPlace:
 RotationPlace:
   cancelvl: 5
 
+LineOfSightPlace:
+  cancelvl: 1
+  # Determines whether to only run the LineOfSightPlace check on specific blocks
+  # Increases performance, mainly intended for mini-game servers which already prevent block placement
+  # And want to stop container or workstation access through walls
+  use-block-whitelist: false
+  block-whitelist:
+    - ANVIL
+    - BARREL
+    - BEACON
+    - BEEHIVE
+    - BEE_NEST
+    - BLAST_FURNACE
+    - BREWING_STAND
+    - CAMPFIRE
+    - CARTOGRAPHY_TABLE
+    - CHEST
+    - CHEST_MINECART
+    - CHIPPED_ANVIL
+    - COMPOSTER
+    - CRAFTING_TABLE
+    - DAMAGED_ANVIL
+    - DISPENSER
+    - DROPPER
+    - ENCHANTING_TABLE
+    - ENDER_CHEST
+    - FURNACE
+    - FURNACE_MINECART
+    - FLETCHING_TABLE
+    - GRINDSTONE
+    - HOPPER
+    - HOPPER_MINECART
+    - ITEM_FRAME
+    - JUKEBOX
+    - LECTERN
+    - LOOM
+    - RESPAWN_ANCHOR
+    - SHULKER_BOX
+    - SMITHING_TABLE
+    - SMOKER
+    - SOUL_CAMPFIRE
+    - STONECUTTER
+    - TRAPPED_CHEST
+    - COMMAND_BLOCK
+    - STRUCTURE_BLOCK
+    - JIGSAW
 # Prediction-based NoSlow 检查
 # 在这里解释错误的服务器代码......即使在发送垃圾数据包时右键单击和副手按钮也很分辨
 # 比其他反作弊更稳定，但请报告任何错误......我在这里修复了大量的代码问题。
-NoSlowA:
+NoSlow:
   # 有多少偏移量是作弊
   # 标志 0.03-0.2 与 NoSlow 一致
   threshold: 0.001
@@ -125,7 +175,9 @@ TimerVehicle:
 
 EntityControl:
   setbackvl: 25
-
+PacketOrderI:
+  # enable if players are getting flagged for using 1.7 animations mods
+  exempt-placing-while-digging: false
 Reach:
   # 我们应该将碰撞箱扩大多少？ 0.0005 应该检测到 3.0005+ reach
   #
@@ -135,6 +187,7 @@ Reach:
   # 我们应该取消我们知道不可能的命中吗？
   # 3.00-3.03 命中可能会通过，但仍会被标记，因为数据包顺序限制
   block-impossible-hits: true
+  ignore-non-player-targets: true
   # 这将在每个ticks结束时发送一个额外的数据包，以检查作弊的可能性
   # 这会注入服务器的连接列表以在服务器刷新之前发送最终数据包
   # 启用这将增加所有玩家的带宽使用
@@ -156,8 +209,30 @@ debug-pipeline-on-join: false
 # 启用实验性检查
 experimental-checks: true
 
+reset-item-usage-on-item-update: true
+reset-item-usage-on-attack: true
+reset-item-usage-on-slot-change: true
+
 # Grim有时会取消非法的数据包，比如用timer，在一秒钟内取消了数个数据包后，我们应该踢掉这个玩家？
 # 我们认为是应该的，因为有些数据包限制器并不计算被Grim取消的数据包。
-packet-spam-threshold: 250
+packet-spam-threshold: 300
+debug-packet-cancel: false
+max-ping-out-of-flying: 1000
+max-ping-firework-boost: 1000
+history:
+  # How many entries should be shown for each page with /grim history <player>
+  entries-per-page: 15
+  # What should the inserted server name be for the history command? This is useful if you use the same database for multiple servers
+  server-name: Server-Name
+  database:
+    # Use SQLITE for local storage, use MYSQL if you have an external MySQL database. This is only updated on server restart
+    type: SQLITE
+    # MySQL connection details
+    host: localhost
+    port: 3306
+    database: grim
+    username: root
+    password: ""
 
-config-version: 8
+# 不要调整这个
+config-version: 10

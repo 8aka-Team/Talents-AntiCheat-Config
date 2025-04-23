@@ -25,46 +25,75 @@ Punishments:
     commands:
       - "5:5 [alert]"
       - "15:20 kick %player% &4&l非法客户端修改!"
-  Post:
-    remove-violations-after: 60
-    checks:
-      - "Post"
-    commands:
-      - "20:20 [alert]"
-      - "40:40 kick %player% &4&l非法客户端修改!"
   BadPackets:
     remove-violations-after: 60
     checks:
       - "BadPackets"
+      - "PacketOrder"
       - "Crash"
     commands:
       - "20:20 [alert]"
       - "40:40 kick %player% &4&l非法客户端修改!"
+  Inventory:
+    remove-violations-after: 300
+    checks:
+      - "Inventory"
+    commands:
+      - "10:10 [alert]"
+      - "20:20 kick %player% &4&l非法客户端修改!"
   Reach:
     remove-violations-after: 60
     checks:
       - "Reach"
+      - "Hitboxes"
     commands:
       - "5:5 [alert]"
       - "10:5 kick %player% &4&l非法客户端修改!"
+  HitboxMiss:
+    remove-violations-after: 300
+    checks:
+      - "HitboxMiss"
+    commands:
+      - "7:5 [alert]"
+      - "14:10 kick %player% &4&l非法客户端修改!"
+  HitboxBlock:
+    remove-violations-after: 300
+    checks:
+      - "HitboxBlock"
+    commands:
+      - "10:5 [alert]"
+      - "20:10 kick %player% &4&l非法客户端修改!"
+  HitboxEntity:
+    remove-violations-after: 300
+    checks:
+      - "HitboxEntity"
+    commands:
+      - "10:10 [alert]"
+      - "20:10 kick %player% &4&l非法客户端修改!"
   Misc:
     remove-violations-after: 60
     checks:
-      - "EntityControl"
+      - "Vehicle"
       - "NoSlow"
+      - "Sprint"
+      - "MultiActions"
       - "Place"
       - "Baritone"
-      - "FastBreak"
+      - "Break"
+      - "TransactionOrder"
+      - "Elytra"
     commands:
       - "10:5 [alert]"
       - "20:10 kick %player% &4&l非法客户端修改!"
   Combat:
     remove-violations-after: 60
     checks:
+      - "Interact"
       - "Killaura"
       - "Aim"
     commands:
       - "20:40 [alert]"
+      - "20:40 [log]"
   # Grim2.0.10版本 没有连点器检查，Grim将在未来添加
   Autoclicker:
     remove-violations-after: 60
@@ -72,3 +101,4 @@ Punishments:
       - "Autoclicker"
     commands:
       - "20:40 [alert]"
+      - "20:40 [log]"

@@ -892,7 +892,7 @@ compatibility:
     overrideflags:
       snow: default
       moving_piston: default+ign_passable+ground_height
-    #如果你是1.18.2以下，可将minimalworldy的数值修改为0
+    #如果您的服务器运行版本低于1.18.2，就将minimalworldy的数值修改为0
     blockcache:
       minimalworldy: -64
     changetracker:

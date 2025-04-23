@@ -92,21 +92,15 @@
 
 - [Matrix](https://matrix.rip)
 - [NocheatPlus](https://github.com/Updated-NoCheatPlus/NoCheatPlus)
-- [GrimAC](https://grim.ac)
-- [AntiAura](https://www.spigotmc.org/resources/antiaura-%C2%BB-reliable-cheat-detection-%C2%BB-anti-cheat-plugin.1368/update?update=16048)
+- [LightningGrimAC](https://modrinth.com/plugin/lightning-grim-anticheat)
 - [Vulcan](https://www.spigotmc.org/resources/vulcan-anti-cheat-advanced-cheat-detection-1-7-1-19.83626/)
-- [SoaromaSAC](https://www.spigotmc.org/resources/soaromasac-lightweight-cheat-detection-system-for-java-bedrock.87702/)
 - [Themis](https://www.spigotmc.org/resources/themis-anti-cheat-1-17-1-18-1-19-bedrock-support-paper-compatibility-free-optimized.90766/)
 - [Hawk](https://github.com/HawkAnticheat/Hawk)
-- [Foxaddition](https://www.spigotmc.org/resources/foxaddition-anti-cheat-1-7-2-1-20-4-geyser-support.111260/)
 - [LightAntiCheat](https://www.spigotmc.org/resources/lightanticheat-1-8-1-20-6-geyser-folia-support.112053/updates)
 - [AAC](https://www.spigotmc.org/resources/aac-advanced-anti-cheat-hack-kill-aura-blocker.6442)
 - [TakaAC](https://www.spigotmc.org/resources/taka-anticheat-takaac-cheap-and-reliable-solution.45167/)
 - [Horizon](https://www.spigotmc.org/resources/horizon-powerful-cheat-detection-in-new-era-1-8-1-12-1-13-1-14.65830/)
-- [KauriAC](https://www.spigotmc.org/resources/kauri-anticheat-best-in-class-performance-destroy-cheaters-1-7-10-1-18-1.53721/)
 - [Spartan](https://www.spigotmc.org/resources/spartan-advanced-anti-cheat-cheat-detection-hack-blocker-1-7-1-19-2-10-summer-sale.25638) 💀[一些猛料](https://github.com/TalentsRC/Talents-anticheat-config/blob/main/.github/fucking-spartan.md)💀
-- [AntiCheatReloaded](https://www.spigotmc.org/resources/anticheatreloaded.23799/)
-- [Negativityv2](https://www.spigotmc.org/resources/negativity-v2-1-8-to-1-20-bungee-velocity-sponge-fabric-minestom.86874/)
 
 ---
 
