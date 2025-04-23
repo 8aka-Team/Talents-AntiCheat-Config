@@ -23,7 +23,8 @@ delete_time: 30
 #禁用绕过权限
 disable_bypass_permission: true
 relog_time: 5
+anti-health-indicator: true
 disabled_components:
   - 'example entry'
 custom_vl_weight:
-  - 'bp.timer:5'
+  - ' '
